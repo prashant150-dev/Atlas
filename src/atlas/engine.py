@@ -9,9 +9,11 @@
         else  -> base model (general / creative text)   (the quality path)
       -> VERIFY -> AtlasResult (with honest "I don't know" on unknowns)
 
-Stage A1 wires routing + tools + the real base model + a small fact lookup. Later
-stages replace the inline fact lookup with a real retrieval index (A2) and add
-test-time reasoning (A3), safety + memory (A4). The interface stays stable.
+The engine wires routing + exact tools + grounded retrieval + the real base model.
+Both ``fact`` and factual ``general`` prompts are grounded against a real retrieval
+index (T4/T8) before falling back to the model, so unknowns get an honest "I don't
+know" instead of a hallucination. Test-time reasoning (A3) and safety + memory (A4)
+plug into the same ``answer`` interface without changing call sites.
 """
 
 from __future__ import annotations
@@ -24,22 +26,9 @@ from .config import AtlasConfig
 from .models.base import BaseModel, EchoModel
 from . import tools
 
-# ---- A1 placeholder fact KB (replaced by a real retrieval index in stage A2) ----
-_FACT_KB: dict[str, str] = {
-    "capital of france": "Paris",
-    "capital of japan": "Tokyo",
-    "capital of india": "New Delhi",
-    "speed of light": "299,792,458 m/s",
-    "largest planet": "Jupiter",
-    "author of hamlet": "William Shakespeare",
-    "chemical symbol for gold": "Au",
-    "boiling point of water": "100 degrees Celsius (at sea level)",
-}
-_STOP = {"the", "of", "is", "a", "an", "what", "who", "for", "to", "in", "at", "me", "tell"}
-
 _CODE_WORDS = ("function", "code", "python", "def ", "write a program", "algorithm", "script")
 _FACT_WORDS = ("capital", "who is", "who wrote", "speed of", "symbol for",
-               "author of", "planet", "boiling", "melting")
+               "author of", "planet", "boiling", "melting", "currency of", "largest", "tallest")
 
 
 @dataclass(frozen=True, slots=True)
@@ -75,19 +64,6 @@ def route(prompt: str) -> str:
     return "general"
 
 
-def _retrieve_fact(prompt: str, threshold: float) -> str | None:
-    """A1 fact lookup: score KB keys by content-word overlap; need a confident match."""
-
-    qw = {w.strip("?.,!") for w in prompt.lower().split()} - _STOP
-    best, best_score = None, 0.0
-    for key, value in _FACT_KB.items():
-        kw = set(key.split()) - _STOP
-        score = len(kw & qw) / max(1, len(kw))
-        if score > best_score:
-            best, best_score = value, score
-    return best if best_score >= threshold else None
-
-
 class AtlasEngine:
     """The complete ATLAS smart layer wrapping a pluggable base model."""
 
@@ -102,6 +78,16 @@ class AtlasEngine:
 
         self.config = config or AtlasConfig()
         self.model = model if model is not None else self._default_model()
+        self._grounder = None  # built lazily on first factual lookup
+
+    def _ground(self):
+        """Lazily build the grounding tier (real retriever over the corpus)."""
+
+        if self._grounder is None:
+            from .grounding import Grounder
+
+            self._grounder = Grounder(threshold=self.config.retrieval_threshold)
+        return self._grounder
 
     def _default_model(self) -> BaseModel:
         """Build the configured real model (lazy — weights load on first use)."""
@@ -160,14 +146,19 @@ class AtlasEngine:
     def _do_fact(self, prompt: str) -> AtlasResult:
         """Retrieve a grounded fact, or answer an honest 'I don't know'."""
 
-        hit = _retrieve_fact(prompt, self.config.retrieval_threshold)
-        if hit is not None:
-            return AtlasResult("fact", hit, True, "retrieval", 0.97)
+        if self.config.use_retrieval:
+            hit = self._ground().lookup(prompt)
+            if hit.grounded:
+                return AtlasResult("fact", hit.answer or "", True, "retrieval", round(0.9 + 0.1 * hit.score, 3))
         return AtlasResult("fact", "I don't know based on my knowledge base.", True, "honest-IDK", 0.9)
 
     def _do_general(self, prompt: str) -> AtlasResult:
-        """Answer open/creative prompts with the real base model."""
+        """Ground when possible (kills hallucination), else use the base model."""
 
+        if self.config.use_retrieval:
+            hit = self._ground().lookup(prompt)
+            if hit.grounded:
+                return AtlasResult("general", hit.answer or "", True, "retrieval", round(0.9 + 0.1 * hit.score, 3))
         text = self.model.generate(prompt, self.config.max_new_tokens)
         return AtlasResult("general", text, False, "base-model", 0.5)
 
