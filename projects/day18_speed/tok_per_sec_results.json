@@ -1,0 +1,33 @@
+{
+  "profiles": {
+    "gpt2_small": {
+      "profile": "gpt2_small",
+      "D": 768,
+      "FF": 4,
+      "LAYERS": 12,
+      "active_params_M": 84.9,
+      "lut_ms": 33.683,
+      "fp32_ms": 25.837,
+      "speedup_x": 0.767,
+      "active_params_per_sec_M": 2521.6
+    },
+    "large_expert": {
+      "profile": "large_expert",
+      "D": 4096,
+      "FF": 3,
+      "LAYERS": 8,
+      "active_params_M": 1342.2,
+      "lut_ms": 368.997,
+      "fp32_ms": 1417.329,
+      "speedup_x": 3.841,
+      "active_params_per_sec_M": 3637.4
+    }
+  },
+  "projection_tok_s_large_regime": {
+    "dream MoE active 900M": 4.04,
+    "active 500M": 7.27,
+    "active 300M": 12.12,
+    "active 200M": 18.19
+  },
+  "note": "end-to-end decode, two matrix regimes. LUT wins only at large N (table build amortises); GPT-2-small is too small. Projection uses large-expert throughput = the 400B-MoE expert regime."
+}

@@ -1,0 +1,37 @@
+{
+  "eff_gflops": 15.0,
+  "sparse_overhead": 1.7,
+  "rows": [
+    {
+      "params_M": 1.0,
+      "proof_hours": 0.9,
+      "decent_hours": 3.8
+    },
+    {
+      "params_M": 5.0,
+      "proof_hours": 23.6,
+      "decent_hours": 94.4
+    },
+    {
+      "params_M": 10.0,
+      "proof_hours": 94.4,
+      "decent_hours": 377.8
+    },
+    {
+      "params_M": 50.0,
+      "proof_hours": 2361.1,
+      "decent_hours": 9444.4
+    },
+    {
+      "params_M": 100.0,
+      "proof_hours": 9444.4,
+      "decent_hours": 37777.8
+    },
+    {
+      "params_M": 1000.0,
+      "proof_hours": 944444.4,
+      "decent_hours": 3777777.8
+    }
+  ],
+  "note": "CPU training time = 6*N*tokens*overhead / eff_FLOPS. TINY models (1-5M) = hours (method-proof feasible); 100M+ = weeks; 1B+ = months. Faster-training tech (sparse-compute + low-bit + LUT-backprop + distill) is next."
+}

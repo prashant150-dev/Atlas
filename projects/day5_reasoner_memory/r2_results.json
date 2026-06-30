@@ -1,0 +1,49 @@
+{
+  "dim": 768,
+  "kb_size": 500,
+  "model": "models/gpt2",
+  "n_eval": 60,
+  "results": [
+    {
+      "bits_per_fact": null,
+      "method": "tfidf(lexical)",
+      "open_acc": null,
+      "ratio_vs_fp32": null,
+      "retrieval_acc": 1.0
+    },
+    {
+      "bits_per_fact": 24576,
+      "elapsed_sec": 28.2,
+      "method": "fp32",
+      "open_acc": 0.15,
+      "ratio_vs_fp32": 1.0,
+      "retrieval_acc": 0.1
+    },
+    {
+      "bits_per_fact": 6176,
+      "elapsed_sec": 27.8,
+      "method": "int8",
+      "open_acc": 0.05,
+      "ratio_vs_fp32": 3.98,
+      "retrieval_acc": 0.0
+    },
+    {
+      "bits_per_fact": 3104,
+      "elapsed_sec": 27.7,
+      "method": "int4",
+      "open_acc": 0.0333,
+      "ratio_vs_fp32": 7.92,
+      "retrieval_acc": 0.0167
+    },
+    {
+      "bits_per_fact": 1568,
+      "elapsed_sec": 29.2,
+      "method": "ternary",
+      "open_acc": 0.0167,
+      "ratio_vs_fp32": 15.67,
+      "retrieval_acc": 0.0
+    }
+  ],
+  "seed": 0,
+  "vector_embedding": "gpt2 mean-pooled last hidden"
+}

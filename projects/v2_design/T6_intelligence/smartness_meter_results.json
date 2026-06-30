@@ -1,0 +1,71 @@
+{
+  "n": 10,
+  "model_alone": 5,
+  "model_plus_tool": 6,
+  "tool_ceiling": 10,
+  "p_setup_ok": 0.75,
+  "p_arith_ok": 0.7,
+  "rows": [
+    {
+      "q": "3 boxes x 12 apples, sell 17",
+      "expr": "3*12-17",
+      "ans": 19,
+      "tool_exact": true
+    },
+    {
+      "q": "5 bags x 8 marbles, give 13",
+      "expr": "5*8-13",
+      "ans": 27,
+      "tool_exact": true
+    },
+    {
+      "q": "60 km/h for 3.5 h",
+      "expr": "60*3.5",
+      "ans": 210.0,
+      "tool_exact": true
+    },
+    {
+      "q": "4 notebooks x 25, pay 200",
+      "expr": "200-4*25",
+      "ans": 100,
+      "tool_exact": true
+    },
+    {
+      "q": "7 rows x 6 chairs, remove 9",
+      "expr": "7*6-9",
+      "ans": 33,
+      "tool_exact": true
+    },
+    {
+      "q": "50 L tank, -4 L/h for 6 h",
+      "expr": "50-4*6",
+      "ans": 26,
+      "tool_exact": true
+    },
+    {
+      "q": "15 boxes x 3 kg + 5 kg crate",
+      "expr": "15*3+5",
+      "ans": 50,
+      "tool_exact": true
+    },
+    {
+      "q": "240 pages / 30 per day",
+      "expr": "240/30",
+      "ans": 8.0,
+      "tool_exact": true
+    },
+    {
+      "q": "compound: (12+8)*3 - 10",
+      "expr": "(12+8)*3-10",
+      "ans": 50,
+      "tool_exact": true
+    },
+    {
+      "q": "17*23 (big multiply)",
+      "expr": "17*23",
+      "ans": 391,
+      "tool_exact": true
+    }
+  ],
+  "note": "smartness ceiling: tools make execution exact (100% on domain), so accuracy is bounded only by SETUP/reasoning, which test-time compute improves. Max accuracy = model+tool+verify on verifiable tasks."
+}

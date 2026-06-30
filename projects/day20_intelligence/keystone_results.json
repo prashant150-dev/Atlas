@@ -1,0 +1,38 @@
+{
+  "n_domains": 32,
+  "keys_per": 32,
+  "H": 4,
+  "n_expert": 32,
+  "steps": 3000,
+  "rows": [
+    {
+      "name": "dense_small",
+      "active_ffn": 256,
+      "total_params": 4452,
+      "recall": 0.2666
+    },
+    {
+      "name": "moe_top1",
+      "active_ffn": 1280,
+      "total_params": 14560,
+      "recall": 1.0
+    },
+    {
+      "name": "dense_match(h=20)",
+      "active_ffn": 1280,
+      "total_params": 5492,
+      "recall": 0.5938
+    },
+    {
+      "name": "dense_big",
+      "active_ffn": 8192,
+      "total_params": 12512,
+      "recall": 1.0
+    }
+  ],
+  "dense_small": 0.2666,
+  "moe": 1.0,
+  "dense_big": 1.0,
+  "verdict": "DREAM-CONSISTENT: sparse active reasons like the big total",
+  "note": "4A keystone: at equal ACTIVE compute, does MoE (small active, big total) match dense_big and beat dense_small on a capacity-bound task? If yes, the dream's 'sparse active is smart' assumption holds."
+}

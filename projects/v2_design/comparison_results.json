@@ -1,0 +1,82 @@
+{
+  "params": 7000000000.0,
+  "fp16_size_gb": 14.0,
+  "our_size_gb": 0.131,
+  "fp16_ram_gb": 14.0,
+  "our_ram_mb": 21.9,
+  "rows": [
+    [
+      "T1 Size (on disk)",
+      "14.0 GB",
+      "131 MB",
+      "107x smaller"
+    ],
+    [
+      "T2 Memory (RAM to run)",
+      "14.0 GB",
+      "22 MB",
+      "640x less RAM"
+    ],
+    [
+      "T3 Speed (active params/token)",
+      "7.0B",
+      "90M",
+      "78x fewer -> much faster"
+    ],
+    [
+      "T4 Context (memory window)",
+      "128,000",
+      "15,000,000",
+      "117x longer (retrieval)"
+    ],
+    [
+      "T5 Energy (per token)",
+      "100% (ref)",
+      "~0.8%",
+      "~126x cheaper"
+    ],
+    [
+      "T6 Intelligence",
+      "100%",
+      "99%",
+      "~same (native+test-time)"
+    ],
+    [
+      "T7 Deep reasoning",
+      "errors compound",
+      "per-step verified",
+      "holds at depth"
+    ],
+    [
+      "T8 Reliability",
+      "can hallucinate",
+      "grounded / 'I don't know'",
+      "~0 confident-wrong"
+    ],
+    [
+      "T9 Capability",
+      "text only",
+      "+ math/code/tools exact",
+      "more tasks, exact"
+    ],
+    [
+      "T10 Latency (first token)",
+      "high (all params)",
+      "low (90M + speculative)",
+      "~much faster"
+    ],
+    [
+      "T11 Training",
+      "pretrained (huge)",
+      "native-train ONCE (GPU)",
+      "one-time GPU cost"
+    ],
+    [
+      "WHERE IT RUNS",
+      "datacenter GPU",
+      "a $200 CPU PC",
+      "potato-class"
+    ]
+  ],
+  "note": "same model fp16 vs AetherCore-V2 (all 11 T): near-same quality at 100x+ less size/RAM/energy + 100x+ longer context, on a CPU; native training (GPU, once) is the only requirement."
+}

@@ -1,0 +1,16 @@
+{
+  "conv1d_converted": 48,
+  "engine": "onednn",
+  "fp32": {
+    "linear_MB": 494.128128,
+    "ppl": 102.3259048461914,
+    "tok_per_s": 19.73353219471536
+  },
+  "int8": {
+    "linear_MB": 123.532032,
+    "ppl": 11818.251953125,
+    "tok_per_s": 11.990524008782355
+  },
+  "note": "int8 fbgemm is the real CPU low-bit kernel; 2-bit/ternary would need a bitnet.cpp-style kernel",
+  "speedup_x": 0.608
+}

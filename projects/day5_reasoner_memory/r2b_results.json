@@ -1,0 +1,38 @@
+{
+  "projection_MB": {
+    "1,000,000,000_facts_MB": 7075.0,
+    "1,000,000_facts_MB": 7.1,
+    "100,000,000_facts_MB": 707.5
+  },
+  "results": [
+    {
+      "compression_x": 6.39,
+      "facts": 500,
+      "gzip_bits_per_fact": 71.5,
+      "gzip_bytes": 4466,
+      "raw_bits_per_fact": 456.4,
+      "raw_bytes": 28527
+    },
+    {
+      "compression_x": 7.83,
+      "facts": 5000,
+      "gzip_bits_per_fact": 58.4,
+      "gzip_bytes": 36492,
+      "raw_bits_per_fact": 456.9,
+      "raw_bytes": 285561
+    },
+    {
+      "compression_x": 8.06,
+      "facts": 50000,
+      "gzip_bits_per_fact": 56.6,
+      "gzip_bytes": 354018,
+      "raw_bits_per_fact": 456.8,
+      "raw_bytes": 2855025
+    }
+  ],
+  "sizes": [
+    500,
+    5000,
+    50000
+  ]
+}

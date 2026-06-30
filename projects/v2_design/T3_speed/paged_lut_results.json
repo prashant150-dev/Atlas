@@ -1,0 +1,22 @@
+{
+  "K": 4096,
+  "N": 4096,
+  "n_layers": 16,
+  "fp32_mb": 1073.7,
+  "idx_mb": 67.4,
+  "modes": {
+    "paged_fp32": {
+      "peak_mb": 130.9,
+      "ms": 951.8
+    },
+    "paged_unpack": {
+      "peak_mb": 248.4,
+      "ms": 8163.2
+    },
+    "paged_LUT": {
+      "peak_mb": 68.0,
+      "ms": 230.2
+    }
+  },
+  "note": "paged inference with LUT kernel direct on packed weights vs unpack-to-fp32; T3 fixes T2's paging speed."
+}

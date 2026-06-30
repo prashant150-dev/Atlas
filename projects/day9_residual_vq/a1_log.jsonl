@@ -1,0 +1,8 @@
+{"method": "scalar_ternary", "bits_per_weight": 2.042, "nmse": 0.22362}
+{"method": "single_VQ d4K256", "bits_per_weight": 2.014, "nmse": 0.10931}
+{"method": "residual d4 [16,16]", "bits_per_weight": 2.002, "nmse": 0.14321}
+{"method": "residual d8 [256,256]", "bits_per_weight": 2.056, "nmse": 0.11857}
+{"method": "residual d4 [16,4] (~1.5b)", "bits_per_weight": 1.501, "nmse": 0.24346}
+{"method": "residual d8 [256,16] (~1.25b)", "bits_per_weight": 1.53, "nmse": 0.21121}
+{"method": "single_VQ d8K256 (~1b, ref)", "bits_per_weight": 1.028, "nmse": 0.33496}
+{"method": "residual d4 [256,64,16]", "bits_per_weight": 4.518, "nmse": 0.01178}

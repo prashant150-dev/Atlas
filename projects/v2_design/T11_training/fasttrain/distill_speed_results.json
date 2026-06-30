@@ -1,0 +1,24 @@
+{
+  "max_steps": 900,
+  "teacher_acc": 0.9778,
+  "scratch": {
+    "0": 0.0218,
+    "150": 0.3665,
+    "300": 0.739,
+    "500": 0.9358,
+    "700": 0.9588,
+    "900": 0.9647
+  },
+  "distill": {
+    "0": 0.0192,
+    "150": 0.3392,
+    "300": 0.7172,
+    "500": 0.9343,
+    "700": 0.9539,
+    "900": 0.9608
+  },
+  "steps_scratch": 500,
+  "steps_distill": 500,
+  "speedup": 1.0,
+  "note": "distillation vs scratch for a native-sparse char-LM; fewer steps to quality = a real fast-training lever (orthogonal to per-step speed)."
+}

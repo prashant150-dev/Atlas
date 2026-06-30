@@ -1,0 +1,29 @@
+{
+  "dense_acc": 0.6474999785423279,
+  "rows": [
+    {
+      "sparsity": 0.0,
+      "dense": 0.6475
+    },
+    {
+      "sparsity": 0.9,
+      "post_hoc": 0.05,
+      "random_native": 0.5625,
+      "smart_native": 0.5713
+    },
+    {
+      "sparsity": 0.95,
+      "post_hoc": 0.0375,
+      "random_native": 0.4412,
+      "smart_native": 0.53
+    },
+    {
+      "sparsity": 0.98,
+      "post_hoc": 0.0113,
+      "random_native": 0.2875,
+      "smart_native": 0.3837
+    }
+  ],
+  "verdict": "SMART mask beats random by +0.10 at 98% -> informed native sparsity is the better lever",
+  "note": "smart (lottery-ticket magnitude) mask vs random mask, both native; post-hoc shown dead. Tests the better mask for ultra-sparse."
+}

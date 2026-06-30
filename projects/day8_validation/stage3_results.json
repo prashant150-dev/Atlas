@@ -1,0 +1,101 @@
+{
+  "note": "VQ advantage = scalar_nmse / vq_nmse; >1 = VQ better; rising/stable = survives scaling (reconstruction proxy)",
+  "probe_a_real_gpt2": [
+    {
+      "matrix": "attn.c_proj (0.59M)",
+      "n_weights": 589824,
+      "probe": "A",
+      "scalar_nmse": 0.2355,
+      "sec": 1.9,
+      "vq_advantage_x": 3.419,
+      "vq_bpw": 2.056,
+      "vq_nmse": 0.06887
+    },
+    {
+      "matrix": "attn.c_attn (1.77M)",
+      "n_weights": 1769472,
+      "probe": "A",
+      "scalar_nmse": 0.2192,
+      "sec": 2.5,
+      "vq_advantage_x": 1.619,
+      "vq_bpw": 2.019,
+      "vq_nmse": 0.13542
+    },
+    {
+      "matrix": "mlp.c_fc (2.36M)",
+      "n_weights": 2359296,
+      "probe": "A",
+      "scalar_nmse": 0.22362,
+      "sec": 2.8,
+      "vq_advantage_x": 2.046,
+      "vq_bpw": 2.014,
+      "vq_nmse": 0.10931
+    },
+    {
+      "matrix": "wte embed (38.6M)",
+      "n_weights": 38597376,
+      "probe": "A",
+      "scalar_nmse": 0.17709,
+      "sec": 23.9,
+      "vq_advantage_x": 1.725,
+      "vq_bpw": 2.001,
+      "vq_nmse": 0.10268
+    }
+  ],
+  "probe_b_controlled": [
+    {
+      "n": 64,
+      "n_weights": 16384,
+      "probe": "B",
+      "scalar_nmse": 0.18716,
+      "sec": 0.3,
+      "vq_advantage_x": 2.286,
+      "vq_nmse": 0.08187
+    },
+    {
+      "n": 128,
+      "n_weights": 65536,
+      "probe": "B",
+      "scalar_nmse": 0.18854,
+      "sec": 1.1,
+      "vq_advantage_x": 2.032,
+      "vq_nmse": 0.0928
+    },
+    {
+      "n": 256,
+      "n_weights": 262144,
+      "probe": "B",
+      "scalar_nmse": 0.19031,
+      "sec": 2.6,
+      "vq_advantage_x": 1.928,
+      "vq_nmse": 0.09872
+    },
+    {
+      "n": 512,
+      "n_weights": 1048576,
+      "probe": "B",
+      "scalar_nmse": 0.1911,
+      "sec": 3.4,
+      "vq_advantage_x": 1.912,
+      "vq_nmse": 0.09997
+    },
+    {
+      "n": 1024,
+      "n_weights": 4194304,
+      "probe": "B",
+      "scalar_nmse": 0.19134,
+      "sec": 6.5,
+      "vq_advantage_x": 1.911,
+      "vq_nmse": 0.10011
+    },
+    {
+      "n": 2048,
+      "n_weights": 16777216,
+      "probe": "B",
+      "scalar_nmse": 0.19142,
+      "sec": 19.0,
+      "vq_advantage_x": 1.915,
+      "vq_nmse": 0.09994
+    }
+  ]
+}

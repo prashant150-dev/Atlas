@@ -1,0 +1,33 @@
+{
+  "chance": 0.03225806451612903,
+  "elapsed_sec": 247.3,
+  "task": "modular_addition_mod_31",
+  "test_pairs_unseen": 193,
+  "train_pairs": 768,
+  "variants": [
+    {
+      "gap": 0.3432,
+      "test_acc": 0.6477,
+      "train_acc": 0.9909,
+      "variant": "DenseFP-small"
+    },
+    {
+      "gap": 0.2798,
+      "test_acc": 0.715,
+      "train_acc": 0.9948,
+      "variant": "DenseFP-big"
+    },
+    {
+      "gap": 0.2823,
+      "test_acc": 0.7098,
+      "train_acc": 0.9922,
+      "variant": "MoE-FP"
+    },
+    {
+      "gap": 0.2953,
+      "test_acc": 0.6995,
+      "train_acc": 0.9948,
+      "variant": "VQ-MoE+heal"
+    }
+  ]
+}

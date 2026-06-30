@@ -1,0 +1,47 @@
+{
+  "model": "models/gpt2",
+  "teacher_ppl": 48.41,
+  "bpw": 2.319,
+  "arm": "mixed_K256_p5",
+  "n_windows": 90,
+  "steps": 300,
+  "rows": [
+    {
+      "step": 0,
+      "ppl": 160.81,
+      "top1": 0.5156,
+      "gap_x": 3.322
+    },
+    {
+      "step": 30,
+      "ppl": 100.08,
+      "top1": 0.5469,
+      "gap_x": 2.067
+    },
+    {
+      "step": 60,
+      "ppl": 76.35,
+      "top1": 0.5312,
+      "gap_x": 1.577
+    },
+    {
+      "step": 120,
+      "ppl": 67.67,
+      "top1": 0.5625,
+      "gap_x": 1.398
+    },
+    {
+      "step": 200,
+      "ppl": 66.96,
+      "top1": 0.5312,
+      "gap_x": 1.383
+    },
+    {
+      "step": 300,
+      "ppl": 67.18,
+      "top1": 0.5312,
+      "gap_x": 1.388
+    }
+  ],
+  "note": "deep healing of the proven mixed-precision lever on a teacher-generated distillation corpus; does the FP gap keep closing?"
+}

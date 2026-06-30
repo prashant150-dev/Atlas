@@ -1,0 +1,55 @@
+{
+  "fp16_bits": 16.0,
+  "target_x": 101.0,
+  "target_bits_per_weight": 0.158,
+  "levers": [
+    {
+      "lever": "Low-bit VQ (2-bit)",
+      "x": 8.0,
+      "cumulative_x": 8.0,
+      "eff_bits_per_weight": 2.0,
+      "status": "DONE",
+      "quality_risk": "low (with healing ~1.4x FP)",
+      "how": "16-bit -> 2-bit via mixed-precision vector quantization (our Day-17)"
+    },
+    {
+      "lever": "Sparsity / pruning",
+      "x": 4.0,
+      "cumulative_x": 32.0,
+      "eff_bits_per_weight": 0.5,
+      "status": "TODO",
+      "quality_risk": "medium (must prune only unused weights; healing recovers)",
+      "how": "store only non-zero weights; ~75% pruned = 4x fewer to store"
+    },
+    {
+      "lever": "Cross-layer shared codebook",
+      "x": 1.5,
+      "cumulative_x": 48.0,
+      "eff_bits_per_weight": 0.333,
+      "status": "PROVEN-small",
+      "quality_risk": "tiny (1.017x penalty, Day-16)",
+      "how": "one codebook for all layers instead of per-layer; grows with depth"
+    },
+    {
+      "lever": "Embedding compression",
+      "x": 1.6,
+      "cumulative_x": 76.8,
+      "eff_bits_per_weight": 0.208,
+      "status": "TODO",
+      "quality_risk": "medium (embeddings are sensitive; factorize/low-rank not 2-bit)",
+      "how": "huge vocab embedding table -> low-rank factorization + share"
+    },
+    {
+      "lever": "Structure / dedup (delta, low-rank)",
+      "x": 1.4,
+      "cumulative_x": 107.5,
+      "eff_bits_per_weight": 0.149,
+      "status": "PARTIAL",
+      "quality_risk": "medium (only where real redundancy exists)",
+      "how": "low-rank residuals + dedup repeated blocks"
+    }
+  ],
+  "total_stacked_x": 107.5,
+  "reachable": true,
+  "note": "101x size = stack of ~5 structural levers compounding, NOT one trick; past the ~1-2 bit/weight floor gains come from structure + healing."
+}

@@ -1,0 +1,30 @@
+{
+  "fp_ppl": 48.41,
+  "rows": [
+    {
+      "sparsity": 0.5,
+      "eff_bits": 0.84,
+      "ppl": 114.69,
+      "vs_fp": 2.37
+    },
+    {
+      "sparsity": 0.9,
+      "eff_bits": 0.208,
+      "ppl": 6678.03,
+      "vs_fp": 137.95
+    },
+    {
+      "sparsity": 0.95,
+      "eff_bits": 0.129,
+      "ppl": 8868.62,
+      "vs_fp": 183.2
+    },
+    {
+      "sparsity": 0.98,
+      "eff_bits": 0.082,
+      "ppl": 3896.24,
+      "vs_fp": 80.49
+    }
+  ],
+  "note": "SparseGPT-style post-hoc prune+compensate (no training, CPU) at rising sparsity toward 0.15 bits; measures the real no-GPU accuracy ceiling."
+}

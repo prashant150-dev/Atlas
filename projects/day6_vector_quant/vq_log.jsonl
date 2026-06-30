@@ -1,0 +1,11 @@
+{"method": "scalar_int1", "bits_per_weight": 1.0, "nmse": 1.0}
+{"method": "scalar_int2", "bits_per_weight": 2.0, "nmse": 0.998465}
+{"method": "scalar_int3", "bits_per_weight": 3.0, "nmse": 0.994608}
+{"method": "scalar_int4", "bits_per_weight": 4.0, "nmse": 0.8383}
+{"method": "scalar_ternary", "bits_per_weight": 2.0417, "nmse": 0.223618}
+{"method": "vq_d4_K16", "bits_per_weight": 1.0009, "nmse": 0.367579}
+{"method": "vq_d8_K256", "bits_per_weight": 1.0278, "nmse": 0.334956}
+{"method": "vq_d4_K256", "bits_per_weight": 2.0139, "nmse": 0.109306}
+{"method": "vq_d2_K16", "bits_per_weight": 2.0004, "nmse": 0.128372}
+{"method": "vq_d4_K4096", "bits_per_weight": 3.2222, "nmse": 0.033473}
+{"method": "vq_d8_K4096", "bits_per_weight": 1.9444, "nmse": 0.176653}

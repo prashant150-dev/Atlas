@@ -1,0 +1,8 @@
+{
+  "random": 1.0,
+  "learned": 1.0,
+  "oracle": 1.0,
+  "headroom": 0.0,
+  "verdict": "routing matters little on this task",
+  "note": "same MoE / same active params, three routers. oracle=ceiling, learned=current, random=floor. learned->oracle gap = the headroom better routing (T12) can still capture toward full-total quality."
+}

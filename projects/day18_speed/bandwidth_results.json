@@ -1,0 +1,50 @@
+{
+  "compute_params_per_sec_M": 3637.0,
+  "disk_MB_per_sec": 1269.0,
+  "bits_per_weight": 2.0,
+  "rows": [
+    {
+      "active_M": 80.0,
+      "ram_resident_tok_s": 45.5,
+      "stream_overlap_tok_s": 45.5,
+      "stream_serial_tok_s": 26.5,
+      "active_MB_at_2bit": 20.0
+    },
+    {
+      "active_M": 100.0,
+      "ram_resident_tok_s": 36.4,
+      "stream_overlap_tok_s": 36.4,
+      "stream_serial_tok_s": 21.2,
+      "active_MB_at_2bit": 25.0
+    },
+    {
+      "active_M": 200.0,
+      "ram_resident_tok_s": 18.2,
+      "stream_overlap_tok_s": 18.2,
+      "stream_serial_tok_s": 10.6,
+      "active_MB_at_2bit": 50.0
+    },
+    {
+      "active_M": 300.0,
+      "ram_resident_tok_s": 12.1,
+      "stream_overlap_tok_s": 12.1,
+      "stream_serial_tok_s": 7.1,
+      "active_MB_at_2bit": 75.0
+    },
+    {
+      "active_M": 500.0,
+      "ram_resident_tok_s": 7.3,
+      "stream_overlap_tok_s": 7.3,
+      "stream_serial_tok_s": 4.2,
+      "active_MB_at_2bit": 125.0
+    },
+    {
+      "active_M": 900.0,
+      "ram_resident_tok_s": 4.0,
+      "stream_overlap_tok_s": 4.0,
+      "stream_serial_tok_s": 2.4,
+      "active_MB_at_2bit": 225.0
+    }
+  ],
+  "conclusion": "40-50 tok/s reachable at ~80-100M active params/token IF task-conditional routing keeps the active experts RAM-resident (load once per task, reuse all tokens). Per-token disk reload is the wall to avoid."
+}

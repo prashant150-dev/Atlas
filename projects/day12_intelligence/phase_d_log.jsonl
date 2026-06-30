@@ -1,0 +1,4 @@
+{"variant": "DenseFP-small", "train_acc": 0.9909, "test_acc": 0.6477, "gap": 0.3432}
+{"variant": "DenseFP-big", "train_acc": 0.9948, "test_acc": 0.715, "gap": 0.2798}
+{"variant": "MoE-FP", "train_acc": 0.9922, "test_acc": 0.7098, "gap": 0.2823}
+{"variant": "VQ-MoE+heal", "train_acc": 0.9948, "test_acc": 0.6995, "gap": 0.2953}

@@ -1,0 +1,78 @@
+[
+  {
+    "chance_accuracy": 0.08333333333333333,
+    "elapsed_sec": 220.86342819999845,
+    "results": [
+      {
+        "accuracy": 1.0,
+        "active_bits_per_token": 2402304.0,
+        "active_ratio_vs_fp": 1.0,
+        "first_loss": 2.723973512649536,
+        "last_loss": 1.9737266484298743e-05,
+        "name": "DenseFP",
+        "stored_bits": 2453920.0,
+        "stored_ratio_vs_fp": 1.0
+      },
+      {
+        "accuracy": 0.9479166865348816,
+        "active_bits_per_token": 344531.2,
+        "active_ratio_vs_fp": 6.972674753404045,
+        "first_loss": 0.18865613639354706,
+        "last_loss": 0.18865613639354706,
+        "name": "PostHocTernary",
+        "stored_bits": 396147.2,
+        "stored_ratio_vs_fp": 6.194465087724967
+      },
+      {
+        "accuracy": 1.0,
+        "active_bits_per_token": 529420.8,
+        "active_ratio_vs_fp": 4.537607891491985,
+        "first_loss": 2.742280960083008,
+        "last_loss": 8.508907740178984e-06,
+        "name": "AetherNet",
+        "stored_bits": 1226617.6,
+        "stored_ratio_vs_fp": 2.0005582832008932
+      }
+    ],
+    "task": "copy_m6",
+    "vocab_size": 13
+  },
+  {
+    "chance_accuracy": 0.168,
+    "elapsed_sec": 372.7700913000008,
+    "results": [
+      {
+        "accuracy": 0.918096125125885,
+        "active_bits_per_token": 2402304.0,
+        "active_ratio_vs_fp": 1.0,
+        "first_loss": 3.603623867034912,
+        "last_loss": 0.2559654414653778,
+        "name": "DenseFP",
+        "stored_bits": 2519968.0,
+        "stored_ratio_vs_fp": 1.0
+      },
+      {
+        "accuracy": 0.4697265625,
+        "active_bits_per_token": 344531.2,
+        "active_ratio_vs_fp": 6.972674753404045,
+        "first_loss": 3.2095820903778076,
+        "last_loss": 3.2095820903778076,
+        "name": "PostHocTernary",
+        "stored_bits": 462195.2,
+        "stored_ratio_vs_fp": 5.45217258855133
+      },
+      {
+        "accuracy": 0.8377208113670349,
+        "active_bits_per_token": 529420.8,
+        "active_ratio_vs_fp": 4.537607891491985,
+        "first_loss": 3.56136155128479,
+        "last_loss": 0.45082220435142517,
+        "name": "AetherNet",
+        "stored_bits": 1292665.6,
+        "stored_ratio_vs_fp": 1.9494353373370497
+      }
+    ],
+    "task": "char_lm",
+    "vocab_size": 29
+  }
+]

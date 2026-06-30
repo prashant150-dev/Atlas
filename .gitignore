@@ -1,0 +1,51 @@
+# ===== SECRETS — NEVER COMMIT (security critical) =====
+.atlas_secrets
+.atlas_secrets.*
+!.atlas_secrets.example
+*.token
+*.secret
+.env
+.env.*
+.git-credentials
+**/settings.local.json
+
+# ===== Model weights & big binaries (regenerable / downloadable) =====
+models/
+experiments/
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.gguf
+*.onnx
+*.npz
+*.npy
+
+# ===== Python =====
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+*.egg
+
+# ===== Logs / scratch =====
+*.log
+*.tmp
+_tmp/
+_layers/
+_dd_layers/
+_code_sandbox/
+
+# NOTE: small result JSONs (results.json) are the EVIDENCE — keep them tracked.
+
+# ===== OS =====
+.DS_Store
+Thumbs.db
+desktop.ini
+
+e.txt
+c.txt

@@ -1,0 +1,12 @@
+{
+  "P": 47,
+  "train_frac": 0.6,
+  "bits": "~2 (VQ d=4 K=256 + protect 5%)",
+  "fp_train": 1.0,
+  "fp_heldout": 1.0,
+  "q_heldout_noheal": 1.0,
+  "q_heldout_healed": 1.0,
+  "retained_frac": 1.0,
+  "verdict": "REASONING SURVIVES low-bit",
+  "note": "modular addition tests learned-ALGORITHM (generalisation to held-out pairs), then 2-bit quantization. Does reasoning survive low-bit?"
+}

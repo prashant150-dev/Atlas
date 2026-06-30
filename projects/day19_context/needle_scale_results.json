@@ -1,0 +1,44 @@
+{
+  "chunk_tokens": 60,
+  "topk": 5,
+  "n_needles": 200,
+  "rows": [
+    {
+      "tokens": 100000,
+      "chunks": 1666,
+      "needles": 200,
+      "recall_at_k": 1.0,
+      "index_mb": 0.3,
+      "build_s": 0.03,
+      "query_ms": 0.16
+    },
+    {
+      "tokens": 1000000,
+      "chunks": 16666,
+      "needles": 200,
+      "recall_at_k": 1.0,
+      "index_mb": 2.8,
+      "build_s": 0.29,
+      "query_ms": 0.151
+    },
+    {
+      "tokens": 4000000,
+      "chunks": 66666,
+      "needles": 200,
+      "recall_at_k": 1.0,
+      "index_mb": 11.0,
+      "build_s": 1.17,
+      "query_ms": 0.153
+    },
+    {
+      "tokens": 15000000,
+      "chunks": 250000,
+      "needles": 200,
+      "recall_at_k": 1.0,
+      "index_mb": 41.3,
+      "build_s": 4.42,
+      "query_ms": 0.155
+    }
+  ],
+  "note": "needle-in-haystack retrieval over a growing context via inverted index; shows recall/latency/storage scaling toward 15M tokens (true attention would need ~2.9TB KV \u2014 impossible here)."
+}

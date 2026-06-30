@@ -1,0 +1,68 @@
+{
+  "model": "models/qwen2.5-1.5b",
+  "n": 8,
+  "k_samples": 3,
+  "direct": 3,
+  "cot": 5,
+  "self_consistency": 7,
+  "rows": [
+    {
+      "q": "A shop has 3 boxes with 12 apples each. ",
+      "ans": 19,
+      "direct_ok": false,
+      "cot_ok": true,
+      "sc_ok": true
+    },
+    {
+      "q": "Tom has 5 bags, each with 8 marbles. He ",
+      "ans": 27,
+      "direct_ok": false,
+      "cot_ok": true,
+      "sc_ok": true
+    },
+    {
+      "q": "A train travels 60 km in 1 hour. How far",
+      "ans": 210,
+      "direct_ok": true,
+      "cot_ok": false,
+      "sc_ok": false
+    },
+    {
+      "q": "Sara buys 4 notebooks at 25 rupees each ",
+      "ans": 100,
+      "direct_ok": true,
+      "cot_ok": true,
+      "sc_ok": true
+    },
+    {
+      "q": "There are 7 rows of chairs with 6 chairs",
+      "ans": 33,
+      "direct_ok": false,
+      "cot_ok": true,
+      "sc_ok": true
+    },
+    {
+      "q": "A tank holds 50 litres. It loses 4 litre",
+      "ans": 26,
+      "direct_ok": false,
+      "cot_ok": true,
+      "sc_ok": true
+    },
+    {
+      "q": "Each box weighs 3 kg. A truck carries 15",
+      "ans": 50,
+      "direct_ok": false,
+      "cot_ok": false,
+      "sc_ok": true
+    },
+    {
+      "q": "A book has 240 pages. Raj reads 30 pages",
+      "ans": 8,
+      "direct_ok": true,
+      "cot_ok": false,
+      "sc_ok": true
+    }
+  ],
+  "verdict": "test-time compute HELPS: more thinking -> more correct (same model)",
+  "note": "test-time compute (CoT, self-consistency) on a fixed small model; more inference-compute buys reasoning without more params/GPU."
+}

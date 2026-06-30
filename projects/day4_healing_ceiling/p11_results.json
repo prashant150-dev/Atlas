@@ -1,0 +1,79 @@
+{
+  "best_heldout": {
+    "held_top1": 0.30078125,
+    "step": 240
+  },
+  "bits_per_weight": 2.015625,
+  "checkpoints": [
+    {
+      "eval_positions": 256,
+      "held_ppl": 37149.5859375,
+      "held_top1": 0.05859375,
+      "note": "naive",
+      "step": 0,
+      "train_top1": 0.04296875
+    },
+    {
+      "elapsed_sec": 87.4,
+      "gap": 0.0234,
+      "held_ppl": 1170.9742431640625,
+      "held_top1": 0.20703125,
+      "loss": 2.74102783203125,
+      "step": 15,
+      "train_top1": 0.23046875
+    },
+    {
+      "elapsed_sec": 168.7,
+      "gap": 0.0156,
+      "held_ppl": 689.380126953125,
+      "held_top1": 0.265625,
+      "loss": 1.7988038063049316,
+      "step": 30,
+      "train_top1": 0.28125
+    },
+    {
+      "elapsed_sec": 317.0,
+      "gap": 0.0703,
+      "held_ppl": 549.0939331054688,
+      "held_top1": 0.29296875,
+      "loss": 1.4558091163635254,
+      "step": 60,
+      "train_top1": 0.36328125
+    },
+    {
+      "elapsed_sec": 553.2,
+      "gap": 0.1602,
+      "held_ppl": 410.1708984375,
+      "held_top1": 0.26953125,
+      "loss": 0.9814014434814453,
+      "step": 120,
+      "train_top1": 0.4296875
+    },
+    {
+      "elapsed_sec": 1075.6,
+      "gap": -0.0625,
+      "held_ppl": 375.37841796875,
+      "held_top1": 0.30078125,
+      "loss": 0.5586432218551636,
+      "step": 240,
+      "train_top1": 0.23828125
+    }
+  ],
+  "config": {
+    "ce_weight": 0.1,
+    "grad_clip": 1.0,
+    "kl_temperature": 2.0,
+    "learning_rate": 0.0002,
+    "seed": 0,
+    "seq_len": 64,
+    "steps": 240,
+    "threshold_factor": 0.7
+  },
+  "eval_positions": 256,
+  "heldout_windows": 4,
+  "layers_wrapped": 48,
+  "model": "models/gpt2",
+  "seq_len": 64,
+  "ternary_params": 84934656,
+  "train_windows": 12
+}

@@ -1,0 +1,4 @@
+{"retriever": "lexical", "canonical_acc": 1.0, "paraphrase_acc": 1.0}
+{"retriever": "gpt2_raw", "canonical_acc": 0.1167, "paraphrase_acc": 0.0292}
+{"retriever": "learned", "canonical_acc": 1.0, "paraphrase_acc": 0.9792}
+{"open_book_paraphrase": {"lexical": 1.0, "learned": 0.9833}}

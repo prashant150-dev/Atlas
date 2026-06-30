@@ -1,0 +1,42 @@
+{
+  "p_step_model": 0.85,
+  "p_step_verified": 0.99,
+  "rows": [
+    {
+      "depth": 1,
+      "flat": 0.85,
+      "verified": 0.99
+    },
+    {
+      "depth": 2,
+      "flat": 0.722,
+      "verified": 0.98
+    },
+    {
+      "depth": 3,
+      "flat": 0.614,
+      "verified": 0.97
+    },
+    {
+      "depth": 5,
+      "flat": 0.444,
+      "verified": 0.951
+    },
+    {
+      "depth": 8,
+      "flat": 0.272,
+      "verified": 0.923
+    },
+    {
+      "depth": 12,
+      "flat": 0.142,
+      "verified": 0.886
+    },
+    {
+      "depth": 20,
+      "flat": 0.039,
+      "verified": 0.818
+    }
+  ],
+  "note": "flat N-step reasoning = p^N (compounds, collapses with depth); per-step tool-verification keeps deep chains correct. Depth needs decompose + verify-each-step, not one long think."
+}

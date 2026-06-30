@@ -1,0 +1,4 @@
+{"probe": "A_moe_routing", "n_expert": 8, "top_k": 2, "load_fraction": [0.065, 0.122, 0.148, 0.136, 0.071, 0.1, 0.201, 0.159], "dead_experts": 0, "ideal_load": 0.125, "routing_entropy_norm": 0.971, "load_cv": 0.367}
+{"probe": "B_shared_codebook", "per_matrix_nmse": [0.0689, 0.1093, 0.1213], "shared_nmse": [0.1121, 0.1149, 0.1311], "shared_penalty_x": 1.196}
+{"probe": "C_memory_realism", "templated_bits_per_fact": 23.5, "rich_bits_per_fact": 76.2, "realism_factor_x": 3.25, "rich_1B_facts_GB": 9.5}
+{"probe": "D_floor_by_type", "gaussian_entropy_bits": {"attn.c_attn": -0.278, "mlp.c_fc": -0.777, "wte_embed": -0.752, "ln_1": -2.551}}

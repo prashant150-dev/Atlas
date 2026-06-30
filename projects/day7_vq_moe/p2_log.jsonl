@@ -1,0 +1,4 @@
+{"variant": "DenseFP-small", "acc": 0.7912, "ffn_stored_bits": 65536, "ffn_active_bits_per_token": 65536}
+{"variant": "DenseFP-big", "acc": 0.9504, "ffn_stored_bits": 524288, "ffn_active_bits_per_token": 524288}
+{"variant": "MoE-FP", "acc": 0.9511, "ffn_stored_bits": 540672, "ffn_active_bits_per_token": 147456}
+{"variant": "VQ-MoE+heal", "acc": 0.961, "ffn_stored_bits": 114688, "ffn_active_bits_per_token": 24576}

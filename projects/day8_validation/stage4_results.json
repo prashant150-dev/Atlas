@@ -1,0 +1,20 @@
+{
+  "healing_economics": {
+    "equiv_inference_forwards": 766.1,
+    "fraction_of_pretraining_est": 2.8444444444444443e-07,
+    "heal_steps": 40,
+    "heal_tokens": 2560,
+    "heal_total_s": 134.7,
+    "note": "one-time fine-tune on a tiny calibration set; negligible vs pretraining, but a 400B heal still needs hardware that can backprop 400B (hardware gap)",
+    "pretrain_tokens_est": 9000000000.0,
+    "step_ms": 3368.3
+  },
+  "latency": {
+    "fp_forward_ms": 175.86,
+    "fp_tok_per_s": 14.77,
+    "note": "VQ dequantised to fp32; no low-bit CPU kernel -> latency ~equal, win is DISK",
+    "vq_forward_ms": 241.45,
+    "vq_tok_per_s": 16.59,
+    "vq_vs_fp_forward_x": 1.373
+  }
+}

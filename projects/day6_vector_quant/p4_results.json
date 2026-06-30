@@ -1,0 +1,60 @@
+{
+  "healed_best": {
+    "arm": "vq_sub1_d16K256",
+    "bits_per_weight": 0.574,
+    "ppl": 3997.49,
+    "step": 60,
+    "top1": 0.0938,
+    "trainable_params": 39618816
+  },
+  "model": "models/gpt2",
+  "note": "sub-1-bit via large-group VQ + healing; rotation does not help VQ",
+  "posthoc_sweep": [
+    {
+      "K": 16,
+      "bits_per_weight": 1.0012,
+      "d": 4,
+      "phase": "posthoc",
+      "ppl": 102724.05,
+      "sec": 19.1,
+      "top1": 0.0
+    },
+    {
+      "K": 16,
+      "bits_per_weight": 0.6684,
+      "d": 6,
+      "phase": "posthoc",
+      "ppl": 208910.16,
+      "sec": 19.3,
+      "top1": 0.0
+    },
+    {
+      "K": 64,
+      "bits_per_weight": 0.7593,
+      "d": 8,
+      "phase": "posthoc",
+      "ppl": 71021.05,
+      "sec": 33.7,
+      "top1": 0.0
+    },
+    {
+      "K": 16,
+      "bits_per_weight": 0.5023,
+      "d": 8,
+      "phase": "posthoc",
+      "ppl": 113046.48,
+      "sec": 14.8,
+      "top1": 0.0
+    },
+    {
+      "K": 256,
+      "bits_per_weight": 0.5741,
+      "d": 16,
+      "phase": "posthoc",
+      "ppl": 21166.91,
+      "sec": 92.4,
+      "top1": 0.0
+    }
+  ],
+  "teacher_ppl": 48.40839385986328
+}

@@ -1,0 +1,14 @@
+{
+  "vocab": 41,
+  "avg_sparsity": 0.95,
+  "steps": 1500,
+  "dense_acc": 0.9597,
+  "uniform_acc": 0.9484,
+  "smart_acc": 0.9556,
+  "dense_ppl": 1.12,
+  "uniform_ppl": 1.17,
+  "smart_ppl": 1.14,
+  "smart_gain": 0.0072,
+  "verdict": "smart ~ uniform here",
+  "note": "harder/diverse corpus + smart per-layer sparsity allocation (ends denser, middle sparser) vs uniform, at same avg 95% sparse. Beast-improvement test."
+}

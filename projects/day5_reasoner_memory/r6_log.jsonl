@@ -1,0 +1,6 @@
+{"name": "DenseFP", "test_acc": 0.619, "stored_bits": 2486944.0, "active_bits_per_token": 2402304.0, "stored_ratio_vs_fp": 1.0, "active_ratio_vs_fp": 1.0}
+{"name": "PostHocTernary", "test_acc": 0.527, "stored_bits": 429171.2, "active_bits_per_token": 344531.2, "stored_ratio_vs_fp": 5.79, "active_ratio_vs_fp": 6.97}
+{"name": "AetherNet", "test_acc": 0.435, "stored_bits": 1259641.6, "active_bits_per_token": 529420.8, "stored_ratio_vs_fp": 1.97, "active_ratio_vs_fp": 4.54}
+{"name": "DenseFP", "test_acc": 1.0, "stored_bits": 2474560.0, "active_bits_per_token": 2402304.0, "stored_ratio_vs_fp": 1.0, "active_ratio_vs_fp": 1.0}
+{"name": "PostHocTernary", "test_acc": 0.934, "stored_bits": 416787.2, "active_bits_per_token": 344531.2, "stored_ratio_vs_fp": 5.94, "active_ratio_vs_fp": 6.97}
+{"name": "AetherNet", "test_acc": 1.0, "stored_bits": 1247257.6, "active_bits_per_token": 529420.8, "stored_ratio_vs_fp": 1.98, "active_ratio_vs_fp": 4.54}

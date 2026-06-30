@@ -1,0 +1,52 @@
+{
+  "A_routing": {
+    "dead_experts": 0,
+    "ideal_load": 0.125,
+    "load_cv": 0.367,
+    "load_fraction": [
+      0.065,
+      0.122,
+      0.148,
+      0.136,
+      0.071,
+      0.1,
+      0.201,
+      0.159
+    ],
+    "n_expert": 8,
+    "probe": "A_moe_routing",
+    "routing_entropy_norm": 0.971,
+    "top_k": 2
+  },
+  "B_shared_codebook": {
+    "per_matrix_nmse": [
+      0.0689,
+      0.1093,
+      0.1213
+    ],
+    "probe": "B_shared_codebook",
+    "shared_nmse": [
+      0.1121,
+      0.1149,
+      0.1311
+    ],
+    "shared_penalty_x": 1.196
+  },
+  "C_memory_realism": {
+    "probe": "C_memory_realism",
+    "realism_factor_x": 3.25,
+    "rich_1B_facts_GB": 9.5,
+    "rich_bits_per_fact": 76.2,
+    "templated_bits_per_fact": 23.5
+  },
+  "D_floor_by_type": {
+    "gaussian_entropy_bits": {
+      "attn.c_attn": -0.278,
+      "ln_1": -2.551,
+      "mlp.c_fc": -0.777,
+      "wte_embed": -0.752
+    },
+    "probe": "D_floor_by_type"
+  },
+  "elapsed_sec": 69.3
+}

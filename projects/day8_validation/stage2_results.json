@@ -1,0 +1,44 @@
+{
+  "FP_ppl": 77.79557037353516,
+  "baseline": "scalar group-wise (GPTQ/AWQ/HQQ backbone), post-hoc",
+  "eval": "held-out English (offline)",
+  "note": "matched bits/weight; crossover = honest SOTA positioning",
+  "results": [
+    {
+      "bits_per_weight": 4.25,
+      "method": "scalar_g64_int4",
+      "ppl": 90.88,
+      "sec": 2.6
+    },
+    {
+      "bits_per_weight": 4.007,
+      "method": "vq_d2_K256(~4b)",
+      "ppl": 99.35,
+      "sec": 174.1
+    },
+    {
+      "bits_per_weight": 3.25,
+      "method": "scalar_g64_int3",
+      "ppl": 174.11,
+      "sec": 2.8
+    },
+    {
+      "bits_per_weight": 3.002,
+      "method": "vq_d2_K64(~3b)",
+      "ppl": 151.56,
+      "sec": 53.5
+    },
+    {
+      "bits_per_weight": 2.25,
+      "method": "scalar_g64_int2",
+      "ppl": 10081.41,
+      "sec": 2.5
+    },
+    {
+      "bits_per_weight": 2.014,
+      "method": "vq_d4_K256(~2b)",
+      "ppl": 725.21,
+      "sec": 127.3
+    }
+  ]
+}

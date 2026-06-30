@@ -1,0 +1,2 @@
+{"variant": "fp32", "ppl": 102.33, "tok_per_s": 19.73, "linear_MB": 494.1}
+{"variant": "int8_fbgemm", "ppl": 11818.25, "tok_per_s": 11.99, "linear_MB": 123.5}

@@ -1,0 +1,65 @@
+{
+  "A_monolithic_dense_400B": {
+    "bits_per_weight_to_fit_56GB_disk": 1.12,
+    "bits_per_weight_to_fit_8GB_RAM": 0.16,
+    "dense_speed_tok_s": {
+      "int8_from_DISK": 0.0013,
+      "ternary_from_DISK": 0.005,
+      "ternary_from_RAM_if_it_fit": 0.18
+    },
+    "entropy_floor_bits": 2.04,
+    "storage_GB_by_precision": {
+      "16bit": 800.0,
+      "4bit": 200.0,
+      "8bit": 400.0,
+      "entropy_floor_2.04bit": 102.0,
+      "ternary~2bit": 100.0
+    },
+    "verdict": "IMPOSSIBLE on this PC: needed 0.160 bits/wt << proven floor 2.04"
+  },
+  "B_moe_sparse_400B": [
+    {
+      "active_fits_8GB_RAM": true,
+      "active_fraction": 0.05,
+      "active_params": "20B",
+      "active_ternary_GB_per_token": 5.0,
+      "est_tok_s_if_active_in_RAM": 3.6
+    },
+    {
+      "active_fits_8GB_RAM": true,
+      "active_fraction": 0.02,
+      "active_params": "8B",
+      "active_ternary_GB_per_token": 2.0,
+      "est_tok_s_if_active_in_RAM": 9.0
+    },
+    {
+      "active_fits_8GB_RAM": true,
+      "active_fraction": 0.01,
+      "active_params": "4B",
+      "active_ternary_GB_per_token": 1.0,
+      "est_tok_s_if_active_in_RAM": 18.0
+    }
+  ],
+  "C_reasoner_plus_memory": [
+    {
+      "fits_8GB_RAM": true,
+      "note": "knowledge lives in external memory (disk), not these weights",
+      "reasoner_params": "3B",
+      "ternary_size_GB": 0.75
+    },
+    {
+      "fits_8GB_RAM": true,
+      "note": "knowledge lives in external memory (disk), not these weights",
+      "reasoner_params": "7B",
+      "ternary_size_GB": 1.75
+    }
+  ],
+  "DISCLAIMER": "PROJECTIONS / ESTIMATES ONLY \u2014 no 400B model was run; 8GB CPU cannot run one.",
+  "machine": {
+    "RAM_GB": 8.0,
+    "disk_bandwidth_GBs": 0.5,
+    "disk_free_GB": 56.0,
+    "ram_bandwidth_GBs": 18.0
+  },
+  "target_tok_s": "40-50 (the dream)"
+}

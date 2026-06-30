@@ -1,0 +1,66 @@
+{
+  "matrix": "transformer.h.0.mlp.c_fc.weight",
+  "n_weights": 2359296,
+  "note": "NMSE vs bits/weight; VQ beats scalar at equal bits => cross-weight structure is real",
+  "results": [
+    {
+      "bits_per_weight": 1.0,
+      "method": "scalar_int1",
+      "nmse": 1.0
+    },
+    {
+      "bits_per_weight": 2.0,
+      "method": "scalar_int2",
+      "nmse": 0.998465
+    },
+    {
+      "bits_per_weight": 3.0,
+      "method": "scalar_int3",
+      "nmse": 0.994608
+    },
+    {
+      "bits_per_weight": 4.0,
+      "method": "scalar_int4",
+      "nmse": 0.8383
+    },
+    {
+      "bits_per_weight": 2.0417,
+      "method": "scalar_ternary",
+      "nmse": 0.223618
+    },
+    {
+      "bits_per_weight": 1.0009,
+      "method": "vq_d4_K16",
+      "nmse": 0.367579
+    },
+    {
+      "bits_per_weight": 1.0278,
+      "method": "vq_d8_K256",
+      "nmse": 0.334956
+    },
+    {
+      "bits_per_weight": 2.0139,
+      "method": "vq_d4_K256",
+      "nmse": 0.109306
+    },
+    {
+      "bits_per_weight": 2.0004,
+      "method": "vq_d2_K16",
+      "nmse": 0.128372
+    },
+    {
+      "bits_per_weight": 3.2222,
+      "method": "vq_d4_K4096",
+      "nmse": 0.033473
+    },
+    {
+      "bits_per_weight": 1.9444,
+      "method": "vq_d8_K4096",
+      "nmse": 0.176653
+    }
+  ],
+  "shape": [
+    768,
+    3072
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "bits_per_weight": 2.015625,
+  "caveats": [
+    "tiny 10-sentence healing set; eval overlaps train -> optimistic in-sample ceiling",
+    "single seed; GPT-2-small only"
+  ],
+  "checkpoints": [
+    {
+      "kl": 6.797262191772461,
+      "note": "naive",
+      "ppl": 19448.560546875,
+      "step": 0,
+      "top1": 0.03125
+    },
+    {
+      "elapsed_sec": 120.6,
+      "kl": 2.825192928314209,
+      "loss": 6.066919326782227,
+      "ppl": 141.46853637695312,
+      "step": 15,
+      "top1": 0.25
+    },
+    {
+      "elapsed_sec": 192.4,
+      "kl": 2.542931079864502,
+      "loss": 2.9254257678985596,
+      "ppl": 43.71120834350586,
+      "step": 30,
+      "top1": 0.34375
+    },
+    {
+      "elapsed_sec": 320.1,
+      "kl": 3.5607216358184814,
+      "loss": 2.18231201171875,
+      "ppl": 35.45652770996094,
+      "step": 60,
+      "top1": 0.359375
+    },
+    {
+      "elapsed_sec": 555.6,
+      "kl": 1.995894193649292,
+      "loss": 0.8739177584648132,
+      "ppl": 11.24216365814209,
+      "step": 120,
+      "top1": 0.46875
+    },
+    {
+      "elapsed_sec": 1046.0,
+      "kl": 2.1686596870422363,
+      "loss": 0.5050769448280334,
+      "ppl": 9.482641220092773,
+      "step": 240,
+      "top1": 0.375
+    },
+    {
+      "elapsed_sec": 2031.9,
+      "kl": 1.9972444772720337,
+      "loss": 0.2710469365119934,
+      "ppl": 8.371598243713379,
+      "step": 480,
+      "top1": 0.34375
+    }
+  ],
+  "config": {
+    "ce_weight": 0.1,
+    "grad_clip": 1.0,
+    "kl_temperature": 2.0,
+    "learning_rate": 0.0002,
+    "seed": 0,
+    "seq_len": 64,
+    "steps": 480,
+    "threshold_factor": 0.7
+  },
+  "layers_wrapped": 48,
+  "model": "models/gpt2",
+  "naive": {
+    "kl": 6.797262191772461,
+    "ppl": 19448.560546875,
+    "top1": 0.03125
+  },
+  "teacher_ppl": 33.6243896484375,
+  "ternary_params": 84934656
+}

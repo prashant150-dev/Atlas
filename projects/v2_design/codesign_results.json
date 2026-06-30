@@ -1,0 +1,74 @@
+{
+  "target_x": 101.0,
+  "configs": [
+    {
+      "name": "A: aggressive post-hoc (no train)",
+      "cfg": {
+        "bits": 2,
+        "sparsity": 0.95,
+        "active_params": 90000000.0,
+        "native_trained": false,
+        "test_time_x": 1
+      },
+      "size_x": 106.7,
+      "memory_x": 640.0,
+      "speed_x": 622.2,
+      "energy_x": 311.1,
+      "intelligence_frac": 0.02,
+      "eff_bits": 0.15,
+      "all_eff_101x": true
+    },
+    {
+      "name": "B: aggressive NATIVE (needs GPU train)",
+      "cfg": {
+        "bits": 2,
+        "sparsity": 0.95,
+        "active_params": 90000000.0,
+        "native_trained": true,
+        "test_time_x": 2
+      },
+      "size_x": 106.7,
+      "memory_x": 640.0,
+      "speed_x": 311.1,
+      "energy_x": 311.1,
+      "intelligence_frac": 0.99,
+      "eff_bits": 0.15,
+      "all_eff_101x": true
+    },
+    {
+      "name": "C: safe 4-bit (CPU, no train)",
+      "cfg": {
+        "bits": 4,
+        "sparsity": 0.5,
+        "active_params": 500000000.0,
+        "native_trained": false,
+        "test_time_x": 2
+      },
+      "size_x": 7.8,
+      "memory_x": 320.0,
+      "speed_x": 28.0,
+      "energy_x": 28.0,
+      "intelligence_frac": 0.81,
+      "eff_bits": 2.05,
+      "all_eff_101x": false
+    },
+    {
+      "name": "D: balanced sweet-spot (native+tools)",
+      "cfg": {
+        "bits": 3,
+        "sparsity": 0.9,
+        "active_params": 120000000.0,
+        "native_trained": true,
+        "test_time_x": 2
+      },
+      "size_x": 45.7,
+      "memory_x": 426.7,
+      "speed_x": 155.6,
+      "energy_x": 155.6,
+      "intelligence_frac": 1.0,
+      "eff_bits": 0.35,
+      "all_eff_101x": false
+    }
+  ],
+  "note": "co-design: efficiency axes (size/memory/speed/energy) couple POSITIVELY via low-bit+sparsity and hit 101x together; intelligence is the binding tension \u2014 high quality at aggressive compression needs NATIVE training (GPU). CPU gets efficiency-101x + intelligence via tools/test-time on verifiable tasks."
+}

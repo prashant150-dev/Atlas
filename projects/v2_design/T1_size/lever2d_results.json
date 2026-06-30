@@ -1,0 +1,9 @@
+{
+  "target_sparsity": 0.98,
+  "dense": 0.6525,
+  "fixed_smart": 0.3837,
+  "gradual": 0.335,
+  "iterative": 0.2875,
+  "best_frac_of_dense": 0.588,
+  "note": "quality-boost levers at 98% sparse: gradual ramp + iterative mask vs fixed-smart. Pushes the ultra-sparse quality toward dense."
+}

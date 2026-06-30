@@ -1,0 +1,7 @@
+{"phase": "fp", "ppl": 48.41}
+{"phase": "rotation_check", "nmse_plain": 0.45314, "nmse_rotated": 0.45314}
+{"phase": "posthoc", "d": 4, "K": 16, "bits_per_weight": 1.0012, "ppl": 102724.05, "top1": 0.0, "sec": 19.1}
+{"phase": "posthoc", "d": 6, "K": 16, "bits_per_weight": 0.6684, "ppl": 208910.16, "top1": 0.0, "sec": 19.3}
+{"phase": "posthoc", "d": 8, "K": 64, "bits_per_weight": 0.7593, "ppl": 71021.05, "top1": 0.0, "sec": 33.7}
+{"phase": "posthoc", "d": 8, "K": 16, "bits_per_weight": 0.5023, "ppl": 113046.48, "top1": 0.0, "sec": 14.8}
+{"phase": "posthoc", "d": 16, "K": 256, "bits_per_weight": 0.5741, "ppl": 21166.91, "top1": 0.0, "sec": 92.4}

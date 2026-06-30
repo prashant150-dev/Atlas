@@ -1,0 +1,35 @@
+{
+  "model": "models/gpt2",
+  "teacher_ppl": 48.41,
+  "rows": [
+    {
+      "sparsity": 0.0,
+      "bpw": 2.269,
+      "size_x": 7.1,
+      "ppl": 111.24,
+      "vs_fp": 2.3
+    },
+    {
+      "sparsity": 0.25,
+      "bpw": 1.769,
+      "size_x": 9.0,
+      "ppl": 247.56,
+      "vs_fp": 5.11
+    },
+    {
+      "sparsity": 0.5,
+      "bpw": 1.269,
+      "size_x": 12.6,
+      "ppl": 1361.18,
+      "vs_fp": 28.12
+    },
+    {
+      "sparsity": 0.75,
+      "bpw": 0.769,
+      "size_x": 20.8,
+      "ppl": 3052.11,
+      "vs_fp": 63.05
+    }
+  ],
+  "note": "Lever 2 sparsity: prune smallest weight-vectors + 2-bit VQ + heal; measures the real size-x vs quality trade as sparsity rises."
+}

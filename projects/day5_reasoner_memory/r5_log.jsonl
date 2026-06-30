@@ -1,0 +1,3 @@
+{"reasoner": "fp32", "disk_MB": 501.3, "ram_fp32_MB": 497.8, "rss_MB": 1476.6, "tok_per_sec": 17.1, "answer_acc": 0.9125}
+{"reasoner": "int8", "disk_MB": 128.407884, "ram_fp32_MB": 497.8, "rss_MB": 1884.7, "tok_per_sec": 17.6, "answer_acc": 0.9125}
+{"reasoner": "ternary", "disk_MB": 36.146108, "ram_fp32_MB": 497.8, "rss_MB": 2169.0, "tok_per_sec": 17.5, "answer_acc": 0.0}

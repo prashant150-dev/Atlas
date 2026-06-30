@@ -1,0 +1,53 @@
+{
+  "baseline_conv1d_4t": {
+    "config": "Conv1D fp32 (baseline)",
+    "threads": 4,
+    "tok_per_s": 19.84
+  },
+  "best": {
+    "config": "Linear bf16",
+    "threads": 4,
+    "tok_per_s": 22.5
+  },
+  "results": [
+    {
+      "config": "Conv1D fp32 (baseline)",
+      "threads": 4,
+      "tok_per_s": 19.84
+    },
+    {
+      "config": "Conv1D fp32 (baseline)",
+      "threads": 2,
+      "tok_per_s": 19.23
+    },
+    {
+      "config": "Conv1D fp32 (baseline)",
+      "threads": 1,
+      "tok_per_s": 16.24
+    },
+    {
+      "config": "Linear fp32",
+      "threads": 4,
+      "tok_per_s": 20.57
+    },
+    {
+      "config": "Linear fp32",
+      "threads": 2,
+      "tok_per_s": 20.15
+    },
+    {
+      "config": "Linear fp32",
+      "threads": 1,
+      "tok_per_s": 15.64
+    },
+    {
+      "config": "Linear bf16",
+      "threads": 4,
+      "tok_per_s": 22.5
+    },
+    {
+      "config": "torch.compile",
+      "error": "InductorError"
+    }
+  ]
+}

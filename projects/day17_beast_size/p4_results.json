@@ -1,0 +1,21 @@
+{
+  "model": "models/gpt2",
+  "teacher_ppl": 48.41,
+  "arms": [
+    {
+      "arm": "protect_error",
+      "score": "error",
+      "bpw": 2.319,
+      "ppl": 70.83,
+      "top1": 0.5312
+    },
+    {
+      "arm": "protect_sens",
+      "score": "sens",
+      "bpw": 2.319,
+      "ppl": 68.5,
+      "top1": 0.4531
+    }
+  ],
+  "note": "equal-bits, equal-heal: sensitivity-weighted vs reconstruction-error selection of the protected 5%. Win = lower ppl picks better weights."
+}

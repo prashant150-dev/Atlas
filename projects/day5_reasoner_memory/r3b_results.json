@@ -1,0 +1,21 @@
+{
+  "kb_size": 240,
+  "model": "models/gpt2",
+  "open_book_alias": {
+    "learned": 0.8833333333333333,
+    "lexical": 0.08333333333333333
+  },
+  "proj_final_loss": 0.0031,
+  "retrieval": {
+    "gpt2_raw": {
+      "alias": 0.008333333767950535
+    },
+    "learned": {
+      "alias": 0.824999988079071
+    },
+    "lexical": {
+      "alias": 0.0,
+      "canonical": 1.0
+    }
+  }
+}

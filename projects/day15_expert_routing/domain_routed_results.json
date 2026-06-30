@@ -1,0 +1,10 @@
+{
+  "routing": "domain",
+  "accuracy": 1.0,
+  "domains": 8,
+  "experts_loaded_per_task": 1,
+  "expert_ram_reduction_x": 8,
+  "per_expert_params": 8320,
+  "total_expert_params": 66560,
+  "note": "task-conditional loading: load only the task's expert; rest stay on disk"
+}

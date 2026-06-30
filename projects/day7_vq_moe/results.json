@@ -1,0 +1,40 @@
+{
+  "chance": 0.168,
+  "config": {
+    "d_model": 64,
+    "expert_h": 128,
+    "n_expert": 8,
+    "top_k": 2,
+    "vq_K": 256,
+    "vq_group": 4
+  },
+  "elapsed_sec": 189.5,
+  "task": "char_lm",
+  "variants": [
+    {
+      "acc": 0.548,
+      "ffn_active_bits_per_token": 524288,
+      "ffn_stored_bits": 524288,
+      "variant": "DenseFP-small"
+    },
+    {
+      "acc": 0.5473,
+      "ffn_active_bits_per_token": 4194304,
+      "ffn_stored_bits": 4194304,
+      "variant": "DenseFP-big"
+    },
+    {
+      "acc": 0.5492,
+      "ffn_active_bits_per_token": 1064960,
+      "ffn_stored_bits": 4210688,
+      "variant": "MoE-FP"
+    },
+    {
+      "acc": 0.5573,
+      "ffn_active_bits_per_token": 81920,
+      "ffn_stored_bits": 344064,
+      "variant": "VQ-MoE+heal"
+    }
+  ],
+  "vq_posthoc_acc": 0.5487
+}

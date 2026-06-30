@@ -1,0 +1,22 @@
+{
+  "chunk_tokens": 60,
+  "topk": 5,
+  "n_chains": 200,
+  "rows": [
+    {
+      "tokens": 1000000,
+      "chains": 200,
+      "single_hop_acc": 0.0,
+      "multi_hop_acc": 1.0,
+      "multihop_ms": 0.017
+    },
+    {
+      "tokens": 15000000,
+      "chains": 200,
+      "single_hop_acc": 0.0,
+      "multi_hop_acc": 1.0,
+      "multihop_ms": 0.017
+    }
+  ],
+  "note": "multi-hop vs single-hop retrieval over a 1M/15M-token haystack; answer needs 2 chunks chained (ent->mid->answer). Single-hop cannot reach the 2nd chunk; iterative retrieval can. The lever beyond naive RAG."
+}

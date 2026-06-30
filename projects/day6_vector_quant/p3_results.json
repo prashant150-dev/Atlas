@@ -1,0 +1,23 @@
+{
+  "K": 256,
+  "d": 4,
+  "model": "models/gpt2",
+  "note": "equal-bits VQ+heal vs ternary+heal, held-out eval; lower ppl = win",
+  "teacher_ppl": 48.40839385986328,
+  "ternary_final": {
+    "arm": "ternary",
+    "bits_per_weight": 2.016,
+    "ppl": 663.3,
+    "step": 60,
+    "top1": 0.2656,
+    "trainable_params": 124356864
+  },
+  "vq_final": {
+    "arm": "vq",
+    "bits_per_weight": 2.019,
+    "ppl": 94.67,
+    "step": 60,
+    "top1": 0.4531,
+    "trainable_params": 39471360
+  }
+}

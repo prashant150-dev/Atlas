@@ -1,0 +1,40 @@
+{
+  "n_layer": 12,
+  "roles": {
+    "attn.c_attn.weight": {
+      "adjacent_cosine_mean": 0.0004,
+      "raw_entropy_bits": -0.808,
+      "delta_entropy_bits": -0.323,
+      "entropy_saving_bits": -0.485,
+      "raw_vq_nmse": 0.108,
+      "delta_vq_nmse": 0.1055
+    },
+    "attn.c_proj.weight": {
+      "adjacent_cosine_mean": 0.0008,
+      "raw_entropy_bits": -1.077,
+      "delta_entropy_bits": -0.615,
+      "entropy_saving_bits": -0.463,
+      "raw_vq_nmse": 0.1082,
+      "delta_vq_nmse": 0.103
+    },
+    "mlp.c_fc.weight": {
+      "adjacent_cosine_mean": 0.0188,
+      "raw_entropy_bits": -0.9,
+      "delta_entropy_bits": -0.419,
+      "entropy_saving_bits": -0.481,
+      "raw_vq_nmse": 0.1027,
+      "delta_vq_nmse": 0.1016
+    },
+    "mlp.c_proj.weight": {
+      "adjacent_cosine_mean": 0.0015,
+      "raw_entropy_bits": -1.07,
+      "delta_entropy_bits": -0.585,
+      "entropy_saving_bits": -0.484,
+      "raw_vq_nmse": 0.1116,
+      "delta_vq_nmse": 0.1078
+    }
+  },
+  "avg_entropy_saving_bits": -0.478,
+  "avg_adjacent_cosine": 0.005,
+  "green_light": false
+}

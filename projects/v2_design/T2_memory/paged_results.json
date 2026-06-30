@@ -1,0 +1,12 @@
+{
+  "D": 4096,
+  "n_layers": 24,
+  "total_mb": 1610.6,
+  "load_all_peak_mb": 1610.9,
+  "streamed_peak_mb": 67.3,
+  "memory_reduction_x": 23.9,
+  "load_all_ms": 106.2,
+  "streamed_ms": 1343.4,
+  "speed_cost_x": 12.65,
+  "note": "paged/streamed inference: peak RAM = one layer not whole model; lets a model bigger than RAM run, at a disk-read speed cost."
+}

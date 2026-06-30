@@ -1,0 +1,39 @@
+{
+  "model": "models/gpt2",
+  "teacher_ppl": 48.41,
+  "arms": [
+    {
+      "arm": "mixed_K256_p5",
+      "K": 256,
+      "protect_frac": 0.05,
+      "bpw": 2.319,
+      "ppl": 70.83,
+      "top1": 0.5312
+    },
+    {
+      "arm": "vq_K512_p0",
+      "K": 512,
+      "protect_frac": 0.0,
+      "bpw": 2.287,
+      "ppl": 80.87,
+      "top1": 0.5156
+    },
+    {
+      "arm": "mixed_K256_p2",
+      "K": 256,
+      "protect_frac": 0.02,
+      "bpw": 2.139,
+      "ppl": 82.68,
+      "top1": 0.4844
+    },
+    {
+      "arm": "mixed_K256_p10",
+      "K": 256,
+      "protect_frac": 0.1,
+      "bpw": 2.619,
+      "ppl": 69.67,
+      "top1": 0.5156
+    }
+  ],
+  "note": "Part-1 beast-size: mixed-precision VQ+heal vs plain vs bigger-K, held-out ppl. Win = mixed closest to FP and beats bigger-K control."
+}

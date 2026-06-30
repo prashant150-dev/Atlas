@@ -1,0 +1,34 @@
+{
+  "model": "models/gpt2",
+  "teacher_ppl": 48.41,
+  "arms": [
+    {
+      "arm": "single_K256",
+      "K": 256,
+      "M": 1,
+      "protect_frac": 0.0,
+      "bpw": 2.019,
+      "ppl": 111.24,
+      "top1": 0.4219
+    },
+    {
+      "arm": "resid_2xK16",
+      "K": 16,
+      "M": 2,
+      "protect_frac": 0.0,
+      "bpw": 2.002,
+      "ppl": 458.09,
+      "top1": 0.2656
+    },
+    {
+      "arm": "resid_2xK16_p5",
+      "K": 16,
+      "M": 2,
+      "protect_frac": 0.05,
+      "bpw": 2.302,
+      "ppl": 124.32,
+      "top1": 0.4375
+    }
+  ],
+  "note": "residual/additive VQ vs single codebook at equal bits, + stacked protection"
+}

@@ -1,0 +1,5 @@
+{"method": "tfidf(lexical)", "bits_per_fact": null, "ratio_vs_fp32": null, "retrieval_acc": 1.0, "open_acc": null}
+{"method": "fp32", "bits_per_fact": 24576, "ratio_vs_fp32": 1.0, "retrieval_acc": 0.1, "open_acc": 0.15, "elapsed_sec": 28.2}
+{"method": "int8", "bits_per_fact": 6176, "ratio_vs_fp32": 3.98, "retrieval_acc": 0.0, "open_acc": 0.05, "elapsed_sec": 27.8}
+{"method": "int4", "bits_per_fact": 3104, "ratio_vs_fp32": 7.92, "retrieval_acc": 0.0167, "open_acc": 0.0333, "elapsed_sec": 27.7}
+{"method": "ternary", "bits_per_fact": 1568, "ratio_vs_fp32": 15.67, "retrieval_acc": 0.0, "open_acc": 0.0167, "elapsed_sec": 29.2}

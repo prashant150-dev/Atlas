@@ -1,0 +1,42 @@
+{
+  "n": 6,
+  "passed": 6,
+  "types": [
+    "code",
+    "fact",
+    "math"
+  ],
+  "rows": [
+    {
+      "desc": "exact arithmetic",
+      "kind": "math",
+      "passed": true
+    },
+    {
+      "desc": "exponent",
+      "kind": "math",
+      "passed": true
+    },
+    {
+      "desc": "run+verify code (sort)",
+      "kind": "code",
+      "passed": true
+    },
+    {
+      "desc": "run+verify code (sum 1..n)",
+      "kind": "code",
+      "passed": true
+    },
+    {
+      "desc": "grounded fact",
+      "kind": "fact",
+      "passed": true
+    },
+    {
+      "desc": "grounded fact",
+      "kind": "fact",
+      "passed": true
+    }
+  ],
+  "note": "router + tools: one small model handles many task TYPES (math/code/fact) correctly via dispatch; each tool adds a capability the bare model lacks. Capability scales with the toolbox, not model size."
+}

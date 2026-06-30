@@ -1,0 +1,1 @@
+{"kb_entities": 200, "kb_facts": 400, "approx_tokens": 4000, "n_eval": 80, "single_hop_acc": 0.0, "hop1_retrieval_acc": 1.0, "multi_hop_acc": 1.0}

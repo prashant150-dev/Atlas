@@ -1,0 +1,140 @@
+{
+  "model_path": "C:\\aethercore_v3\\models\\gpt2",
+  "target_params": 400000000000.0,
+  "fp16_bits_per_weight": 16.0,
+  "stats": {
+    "n_params": 162915840,
+    "n_matrices": 51,
+    "mean_abs": 0.10480308206026805,
+    "variance": 0.018755308956372143,
+    "differential_entropy_bits": 2.040150499335402,
+    "gaussianity_gap_bits": 0.006945085845238896,
+    "kurtosis": 12.235321044921875
+  },
+  "rate_distortion": [
+    {
+      "label": "2x",
+      "bits_per_weight": 8.0,
+      "compression_ratio": 2.0,
+      "size_gb_at_target_params": 372.5290298461914,
+      "gaussian_nmse_floor": 1.52587890625e-05,
+      "slb_nmse_floor": 1.5112583416991006e-05,
+      "gaussian_rms_rel_floor": 0.00390625
+    },
+    {
+      "label": "4x",
+      "bits_per_weight": 4.0,
+      "compression_ratio": 4.0,
+      "size_gb_at_target_params": 186.2645149230957,
+      "gaussian_nmse_floor": 0.00390625,
+      "slb_nmse_floor": 0.0038688213547496977,
+      "gaussian_rms_rel_floor": 0.0625
+    },
+    {
+      "label": "8x",
+      "bits_per_weight": 2.0,
+      "compression_ratio": 8.0,
+      "size_gb_at_target_params": 93.13225746154785,
+      "gaussian_nmse_floor": 0.0625,
+      "slb_nmse_floor": 0.06190114167599516,
+      "gaussian_rms_rel_floor": 0.25
+    },
+    {
+      "label": "16x",
+      "bits_per_weight": 1.0,
+      "compression_ratio": 16.0,
+      "size_gb_at_target_params": 46.566128730773926,
+      "gaussian_nmse_floor": 0.25,
+      "slb_nmse_floor": 0.24760456670398065,
+      "gaussian_rms_rel_floor": 0.5
+    },
+    {
+      "label": "32x",
+      "bits_per_weight": 0.5,
+      "compression_ratio": 32.0,
+      "size_gb_at_target_params": 23.283064365386963,
+      "gaussian_nmse_floor": 0.5,
+      "slb_nmse_floor": 0.4952091334079613,
+      "gaussian_rms_rel_floor": 0.7071067811865476
+    },
+    {
+      "label": "50x",
+      "bits_per_weight": 0.32,
+      "compression_ratio": 50.0,
+      "size_gb_at_target_params": 14.901161193847656,
+      "gaussian_nmse_floor": 0.6417129487814521,
+      "slb_nmse_floor": 0.6355642265254607,
+      "gaussian_rms_rel_floor": 0.8010698775896221
+    },
+    {
+      "label": "100x",
+      "bits_per_weight": 0.16,
+      "compression_ratio": 100.0,
+      "size_gb_at_target_params": 7.450580596923828,
+      "gaussian_nmse_floor": 0.8010698775896221,
+      "slb_nmse_floor": 0.793394239760757,
+      "gaussian_rms_rel_floor": 0.8950250709279725
+    },
+    {
+      "label": "200x",
+      "bits_per_weight": 0.08,
+      "compression_ratio": 200.0,
+      "size_gb_at_target_params": 3.725290298461914,
+      "gaussian_nmse_floor": 0.8950250709279725,
+      "slb_nmse_floor": 0.8864491795052806,
+      "gaussian_rms_rel_floor": 0.9460576467255959
+    },
+    {
+      "label": "400x",
+      "bits_per_weight": 0.04,
+      "compression_ratio": 400.0,
+      "size_gb_at_target_params": 1.862645149230957,
+      "gaussian_nmse_floor": 0.9460576467255959,
+      "slb_nmse_floor": 0.9369927747779152,
+      "gaussian_rms_rel_floor": 0.9726549474122855
+    }
+  ],
+  "fidelity": [
+    {
+      "target_nmse": 0.1,
+      "target_label": "10% distortion",
+      "min_bits_per_weight_gaussian": 1.660964047443681,
+      "max_compression_gaussian": 9.632959861247398,
+      "min_bits_per_weight_slb": 1.6540189615984422,
+      "max_compression_slb": 9.673407845661949
+    },
+    {
+      "target_nmse": 0.01,
+      "target_label": "1% distortion",
+      "min_bits_per_weight_gaussian": 3.321928094887362,
+      "max_compression_gaussian": 4.816479930623699,
+      "min_bits_per_weight_slb": 3.3149830090421233,
+      "max_compression_slb": 4.826570741496277
+    },
+    {
+      "target_nmse": 0.001,
+      "target_label": "0.1% distortion",
+      "min_bits_per_weight_gaussian": 4.9828921423310435,
+      "max_compression_gaussian": 3.2109866204157993,
+      "min_bits_per_weight_slb": 4.975947056485804,
+      "max_compression_slb": 3.21546829545646
+    },
+    {
+      "target_nmse": 0.0001,
+      "target_label": "0.01% distortion",
+      "min_bits_per_weight_gaussian": 6.643856189774724,
+      "max_compression_gaussian": 2.4082399653118496,
+      "min_bits_per_weight_slb": 6.636911103929486,
+      "max_compression_slb": 2.4107600281894617
+    },
+    {
+      "target_nmse": 1e-05,
+      "target_label": "0.001% distortion",
+      "min_bits_per_weight_gaussian": 8.304820237218406,
+      "max_compression_gaussian": 1.9265919722494795,
+      "min_bits_per_weight_slb": 8.297875151373166,
+      "max_compression_slb": 1.9282044750157823
+    }
+  ],
+  "elapsed_sec": 17.687449400000332
+}

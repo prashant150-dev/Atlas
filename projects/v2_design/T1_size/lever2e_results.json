@@ -1,0 +1,8 @@
+{
+  "dense": 0.6525,
+  "fixed_smart": 0.3837,
+  "proper_rigl": 0.54,
+  "gain": 0.1563,
+  "verdict": "RigL BREAKS the ceiling: +0.156 over fixed-smart",
+  "note": "proper RigL (gradient regrowth) vs fixed-smart at 98% sparse; tries to break the ~59%-of-dense ceiling."
+}

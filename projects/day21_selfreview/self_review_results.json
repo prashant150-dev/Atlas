@@ -1,0 +1,69 @@
+{
+  "A_fixes_then_stops_clean": {
+    "best_score": 1.0,
+    "stopped_because": "clean (no real issues left)",
+    "n_rounds": 2,
+    "rounds": [
+      {
+        "round": 1,
+        "score": 0.6667,
+        "issues": [
+          "bug #1"
+        ],
+        "action": "accepted"
+      },
+      {
+        "round": 2,
+        "score": 1.0,
+        "issues": [],
+        "action": "accepted"
+      }
+    ]
+  },
+  "B_rejects_useless_change": {
+    "best_score": 0.5,
+    "stopped_because": "no further improvement (kept previous best)",
+    "n_rounds": 1,
+    "rounds": [
+      {
+        "round": 1,
+        "score": 0.5,
+        "issues": [
+          "style nitpick"
+        ],
+        "action": "rejected-no-gain"
+      }
+    ]
+  },
+  "C_bounded_stops_endless_polish": {
+    "best_score": 0.003,
+    "stopped_because": "hit round limit (bounded)",
+    "n_rounds": 3,
+    "rounds": [
+      {
+        "round": 1,
+        "score": 0.001,
+        "issues": [
+          "could be slightly better"
+        ],
+        "action": "accepted"
+      },
+      {
+        "round": 2,
+        "score": 0.002,
+        "issues": [
+          "could be slightly better"
+        ],
+        "action": "accepted"
+      },
+      {
+        "round": 3,
+        "score": 0.003,
+        "issues": [
+          "could be slightly better"
+        ],
+        "action": "accepted"
+      }
+    ]
+  }
+}

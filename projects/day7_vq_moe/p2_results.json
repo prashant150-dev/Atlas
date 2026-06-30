@@ -1,0 +1,34 @@
+{
+  "chance": 0.016666666666666666,
+  "elapsed_sec": 294.6,
+  "m_rules": 80,
+  "task": "keyed_substitution",
+  "v_sym": 60,
+  "variants": [
+    {
+      "acc": 0.7912,
+      "ffn_active_bits_per_token": 65536,
+      "ffn_stored_bits": 65536,
+      "variant": "DenseFP-small"
+    },
+    {
+      "acc": 0.9504,
+      "ffn_active_bits_per_token": 524288,
+      "ffn_stored_bits": 524288,
+      "variant": "DenseFP-big"
+    },
+    {
+      "acc": 0.9511,
+      "ffn_active_bits_per_token": 147456,
+      "ffn_stored_bits": 540672,
+      "variant": "MoE-FP"
+    },
+    {
+      "acc": 0.961,
+      "ffn_active_bits_per_token": 24576,
+      "ffn_stored_bits": 114688,
+      "variant": "VQ-MoE+heal"
+    }
+  ],
+  "vq_posthoc_acc": 0.7497
+}

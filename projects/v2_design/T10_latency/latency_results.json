@@ -1,0 +1,26 @@
+{
+  "draft_cost": 0.1,
+  "spec_rows": [
+    {
+      "accept": 0.5,
+      "K4": 1.38,
+      "K8": 1.11
+    },
+    {
+      "accept": 0.7,
+      "K4": 1.98,
+      "K8": 1.78
+    },
+    {
+      "accept": 0.8,
+      "K4": 2.4,
+      "K8": 2.4
+    },
+    {
+      "accept": 0.9,
+      "K4": 2.93,
+      "K8": 3.4
+    }
+  ],
+  "note": "speculative decoding ~2-3x at 0.8 acceptance (lossless, target verifies); small-active cuts first-token latency; 101x latency = small-active x speculative x prefetch vs big-dense-on-weak-HW."
+}

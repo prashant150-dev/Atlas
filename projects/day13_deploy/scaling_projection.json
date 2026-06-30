@@ -1,0 +1,223 @@
+{
+  "assumptions": {
+    "bits": {
+      "fp16": 16.0,
+      "fp32": 32.0,
+      "ours_2bit": 2.02,
+      "ternary_1.58": 1.58
+    },
+    "eff": 0.5,
+    "hardware": {
+      "H100 (80GB)": [
+        75.0,
+        3350.0
+      ],
+      "Modern PC (64GB DDR5)": [
+        56.0,
+        80.0
+      ],
+      "RTX 4090 (24GB)": [
+        22.0,
+        1008.0
+      ],
+      "This PC (8GB DDR3)": [
+        6.5,
+        18.0
+      ]
+    }
+  },
+  "models": [
+    {
+      "fp16_GB": 2.0,
+      "hardware": {
+        "H100 (80GB)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 837.5,
+          "ours_fits": true,
+          "ours_tok_s": 6633.7
+        },
+        "Modern PC (64GB DDR5)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 20.0,
+          "ours_fits": true,
+          "ours_tok_s": 158.4
+        },
+        "RTX 4090 (24GB)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 252.0,
+          "ours_fits": true,
+          "ours_tok_s": 1996.0
+        },
+        "This PC (8GB DDR3)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 4.5,
+          "ours_fits": true,
+          "ours_tok_s": 35.6
+        }
+      },
+      "model": "1B",
+      "ours_2bit_GB": 0.3,
+      "ram_shrink_x": 7.9
+    },
+    {
+      "fp16_GB": 14.0,
+      "hardware": {
+        "H100 (80GB)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 119.6,
+          "ours_fits": true,
+          "ours_tok_s": 947.7
+        },
+        "Modern PC (64GB DDR5)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 2.9,
+          "ours_fits": true,
+          "ours_tok_s": 22.6
+        },
+        "RTX 4090 (24GB)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 36.0,
+          "ours_fits": true,
+          "ours_tok_s": 285.1
+        },
+        "This PC (8GB DDR3)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 5.1
+        }
+      },
+      "model": "7B",
+      "ours_2bit_GB": 1.8,
+      "ram_shrink_x": 7.9
+    },
+    {
+      "fp16_GB": 28.0,
+      "hardware": {
+        "H100 (80GB)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 59.8,
+          "ours_fits": true,
+          "ours_tok_s": 473.8
+        },
+        "Modern PC (64GB DDR5)": {
+          "fp16_fits": true,
+          "fp16_tok_s": 1.4,
+          "ours_fits": true,
+          "ours_tok_s": 11.3
+        },
+        "RTX 4090 (24GB)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 142.6
+        },
+        "This PC (8GB DDR3)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 2.5
+        }
+      },
+      "model": "14B",
+      "ours_2bit_GB": 3.5,
+      "ram_shrink_x": 7.9
+    },
+    {
+      "fp16_GB": 100.0,
+      "hardware": {
+        "H100 (80GB)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 132.7
+        },
+        "Modern PC (64GB DDR5)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 3.2
+        },
+        "RTX 4090 (24GB)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 39.9
+        },
+        "This PC (8GB DDR3)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": false,
+          "ours_tok_s": null
+        }
+      },
+      "model": "50B",
+      "ours_2bit_GB": 12.6,
+      "ram_shrink_x": 7.9
+    },
+    {
+      "fp16_GB": 200.0,
+      "hardware": {
+        "H100 (80GB)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 66.3
+        },
+        "Modern PC (64GB DDR5)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": true,
+          "ours_tok_s": 1.6
+        },
+        "RTX 4090 (24GB)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": false,
+          "ours_tok_s": null
+        },
+        "This PC (8GB DDR3)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": false,
+          "ours_tok_s": null
+        }
+      },
+      "model": "100B",
+      "ours_2bit_GB": 25.2,
+      "ram_shrink_x": 7.9
+    },
+    {
+      "fp16_GB": 800.0,
+      "hardware": {
+        "H100 (80GB)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": false,
+          "ours_tok_s": null
+        },
+        "Modern PC (64GB DDR5)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": false,
+          "ours_tok_s": null
+        },
+        "RTX 4090 (24GB)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": false,
+          "ours_tok_s": null
+        },
+        "This PC (8GB DDR3)": {
+          "fp16_fits": false,
+          "fp16_tok_s": null,
+          "ours_fits": false,
+          "ours_tok_s": null
+        }
+      },
+      "model": "400B",
+      "ours_2bit_GB": 101.0,
+      "ram_shrink_x": 7.9
+    }
+  ]
+}

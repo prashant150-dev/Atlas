@@ -1,0 +1,4 @@
+{"retriever": "lexical", "canonical_acc": 1.0, "alias_acc": 0.0}
+{"retriever": "gpt2_raw", "canonical_acc": null, "alias_acc": 0.0083}
+{"retriever": "learned", "canonical_acc": null, "alias_acc": 0.825}
+{"open_book_alias": {"lexical": 0.0833, "learned": 0.8833}}

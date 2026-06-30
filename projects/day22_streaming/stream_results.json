@@ -1,0 +1,12 @@
+{
+  "full_fp_mb": 497.8,
+  "peak_fp_resident_mb": 154.4,
+  "resident_reduction_x": 3.2,
+  "compressed_mb": 111.0,
+  "compression_x": 4.49,
+  "n_quantized": 48,
+  "n_raw": 100,
+  "max_abs_err": 0.26388,
+  "seconds": 120.9,
+  "note": "streaming tensor-by-tensor conversion; peak RAM = largest single tensor, not the whole model. Proves full FP need never be resident."
+}

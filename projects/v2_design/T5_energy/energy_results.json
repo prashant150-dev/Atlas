@@ -1,0 +1,48 @@
+{
+  "naive_pJ": 644.6,
+  "configs": [
+    {
+      "config": "fp32 dense (naive)",
+      "active_frac": 1.0,
+      "bits": 32,
+      "multiply": true,
+      "pJ": 644.6,
+      "vs_naive_x": 1.0
+    },
+    {
+      "config": "+ 2-bit weights (low-bit)",
+      "active_frac": 1.0,
+      "bits": 2,
+      "multiply": true,
+      "pJ": 44.6,
+      "vs_naive_x": 14.5
+    },
+    {
+      "config": "+ no-multiply kernel (ternary)",
+      "active_frac": 1.0,
+      "bits": 2,
+      "multiply": false,
+      "pJ": 40.9,
+      "vs_naive_x": 15.8
+    },
+    {
+      "config": "+ sparsity 1/8 active (MoE)",
+      "active_frac": 0.125,
+      "bits": 2,
+      "multiply": false,
+      "pJ": 5.11,
+      "vs_naive_x": 126.1
+    },
+    {
+      "config": "+ sparsity 1/16 active",
+      "active_frac": 0.0625,
+      "bits": 2,
+      "multiply": false,
+      "pJ": 2.56,
+      "vs_naive_x": 252.2
+    }
+  ],
+  "best_vs_naive_x": 252.2,
+  "energy_101x_reached": true,
+  "note": "energy/token from Horowitz figures; DRAM byte-movement dominates so low-bit is the top energy lever, then sparsity, then no-multiply. 101x energy reachable vs naive fp32 dense; plus ~100x hardware-cost tier."
+}

@@ -1,0 +1,7 @@
+{"method": "FP", "bits_per_weight": 32, "ppl": 77.796}
+{"method": "scalar_g64_int4", "bits_per_weight": 4.25, "ppl": 90.88, "sec": 2.6}
+{"method": "vq_d2_K256(~4b)", "bits_per_weight": 4.007, "ppl": 99.35, "sec": 174.1}
+{"method": "scalar_g64_int3", "bits_per_weight": 3.25, "ppl": 174.11, "sec": 2.8}
+{"method": "vq_d2_K64(~3b)", "bits_per_weight": 3.002, "ppl": 151.56, "sec": 53.5}
+{"method": "scalar_g64_int2", "bits_per_weight": 2.25, "ppl": 10081.41, "sec": 2.5}
+{"method": "vq_d4_K256(~2b)", "bits_per_weight": 2.014, "ppl": 725.21, "sec": 127.3}

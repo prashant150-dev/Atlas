@@ -1,0 +1,45 @@
+{
+  "compression": {
+    "int8": {
+      "disk_MB": 128.4,
+      "ratio": 5.08,
+      "rel_err": 0.0772
+    },
+    "ternary": {
+      "bits_per_weight": 2.063,
+      "disk_MB": 36.1,
+      "ratio": 18.04,
+      "rel_err": 0.4806
+    }
+  },
+  "kb_size": 240,
+  "model": "models/gpt2",
+  "n_open": 80,
+  "note": "retrieval fixed (fp32); load_packed dequantizes to fp32 so RAM/speed are reasoner-invariant on CPU; ternary win is DISK only",
+  "variants": [
+    {
+      "answer_acc": 0.9125,
+      "disk_MB": 501.3,
+      "ram_fp32_MB": 497.8,
+      "reasoner": "fp32",
+      "rss_MB": 1476.6,
+      "tok_per_sec": 17.1
+    },
+    {
+      "answer_acc": 0.9125,
+      "disk_MB": 128.407884,
+      "ram_fp32_MB": 497.8,
+      "reasoner": "int8",
+      "rss_MB": 1884.7,
+      "tok_per_sec": 17.6
+    },
+    {
+      "answer_acc": 0.0,
+      "disk_MB": 36.146108,
+      "ram_fp32_MB": 497.8,
+      "reasoner": "ternary",
+      "rss_MB": 2169.0,
+      "tok_per_sec": 17.5
+    }
+  ]
+}

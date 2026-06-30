@@ -1,0 +1,47 @@
+{
+  "matrix": "transformer.h.0.mlp.c_fc.weight",
+  "n_weights": 2359296,
+  "note": "residual/additive VQ vs single VQ at matched bits; lower NMSE at equal bits = win",
+  "results": [
+    {
+      "bits_per_weight": 2.042,
+      "method": "scalar_ternary",
+      "nmse": 0.22362
+    },
+    {
+      "bits_per_weight": 2.014,
+      "method": "single_VQ d4K256",
+      "nmse": 0.10931
+    },
+    {
+      "bits_per_weight": 2.002,
+      "method": "residual d4 [16,16]",
+      "nmse": 0.14321
+    },
+    {
+      "bits_per_weight": 2.056,
+      "method": "residual d8 [256,256]",
+      "nmse": 0.11857
+    },
+    {
+      "bits_per_weight": 1.501,
+      "method": "residual d4 [16,4] (~1.5b)",
+      "nmse": 0.24346
+    },
+    {
+      "bits_per_weight": 1.53,
+      "method": "residual d8 [256,16] (~1.25b)",
+      "nmse": 0.21121
+    },
+    {
+      "bits_per_weight": 1.028,
+      "method": "single_VQ d8K256 (~1b, ref)",
+      "nmse": 0.33496
+    },
+    {
+      "bits_per_weight": 4.518,
+      "method": "residual d4 [256,64,16]",
+      "nmse": 0.01178
+    }
+  ]
+}

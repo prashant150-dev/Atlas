@@ -1,0 +1,27 @@
+{
+  "dense_acc": 0.6474999785423279,
+  "rows": [
+    {
+      "sparsity": 0.0,
+      "mode": "dense",
+      "acc": 0.6475
+    },
+    {
+      "sparsity": 0.9,
+      "post_hoc_acc": 0.05,
+      "native_acc": 0.5625
+    },
+    {
+      "sparsity": 0.95,
+      "post_hoc_acc": 0.0375,
+      "native_acc": 0.4538
+    },
+    {
+      "sparsity": 0.98,
+      "post_hoc_acc": 0.0113,
+      "native_acc": 0.3113
+    }
+  ],
+  "verdict": "NATIVE sparse SURVIVES where post-hoc dies -> the path to ultra-low avg-bits is native training",
+  "note": "native sparse training vs post-hoc pruning at extreme sparsity; tests whether sub-0.15-bit-AVERAGE (via 96%+ zeros) is reachable natively (post-hoc collapses)."
+}

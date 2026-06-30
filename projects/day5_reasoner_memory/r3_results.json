@@ -1,0 +1,26 @@
+{
+  "kb_size": 240,
+  "model": "models/gpt2",
+  "n_open": 60,
+  "open_book_paraphrase": {
+    "learned": 0.9833333333333333,
+    "lexical": 1.0
+  },
+  "proj_dim": 128,
+  "proj_final_loss": 0.0029,
+  "proj_steps": 600,
+  "retrieval": {
+    "gpt2_raw": {
+      "canonical": 0.11666666716337204,
+      "paraphrase": 0.02916666679084301
+    },
+    "learned": {
+      "canonical": 1.0,
+      "paraphrase": 0.9791666865348816
+    },
+    "lexical": {
+      "canonical": 1.0,
+      "paraphrase": 1.0
+    }
+  }
+}

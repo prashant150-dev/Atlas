@@ -1,0 +1,29 @@
+{
+  "bits_per_weight": 2.015625,
+  "config": {
+    "ce_weight": 0.1,
+    "grad_clip": 1.0,
+    "kl_temperature": 2.0,
+    "learning_rate": 0.0002,
+    "seed": 0,
+    "seq_len": 64,
+    "steps": 30,
+    "threshold_factor": 0.7
+  },
+  "elapsed_sec": 268.60769840000285,
+  "first_step_loss": 477.55450439453125,
+  "healed_kl": 2.0499768257141113,
+  "healed_perplexity": 401.2618103027344,
+  "healed_sample": "The most important idea in science is not a good and is a good and it is a good and it is a good and it is a good and it",
+  "healed_top1_agreement": 0.28358209133148193,
+  "last_step_loss": 26.562482833862305,
+  "layers_wrapped": 48,
+  "model_path": "C:\\aethercore_v3\\models\\gpt2",
+  "naive_kl": 6.0030927658081055,
+  "naive_perplexity": 27325.828125,
+  "naive_sample": "The most important idea in science is details details details details details details details details details details details details\n cpl cpl cpl cpl cpl c",
+  "naive_top1_agreement": 0.02985074557363987,
+  "teacher_perplexity": 42.77327346801758,
+  "teacher_sample": "The most important idea in science is that the universe is a collection of particles. The universe is a collection of particles.\n\nThe universe is a collection",
+  "ternary_params": 84934656
+}

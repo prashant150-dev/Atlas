@@ -1,0 +1,3 @@
+{"method": "FP_teacher", "bits_per_weight": 32.0, "ppl": 8.195, "top1": 1.0}
+{"method": "ternary(baseline)", "bits_per_weight": 2.0312, "ppl": 49357.391, "top1": 0.0234, "elapsed_sec": 6.4}
+{"method": "vq_d4_K256", "bits_per_weight": 2.0185, "ppl": 1879.718, "top1": 0.0781, "elapsed_sec": 109.9}

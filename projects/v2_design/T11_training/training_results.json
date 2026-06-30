@@ -1,0 +1,31 @@
+{
+  "levers": [
+    {
+      "lever": "Distillation (learn from a teacher)",
+      "x": 3.0,
+      "cumulative_x": 3.0,
+      "why": "fewer tokens to reach quality"
+    },
+    {
+      "lever": "Better data / curriculum",
+      "x": 2.0,
+      "cumulative_x": 6.0,
+      "why": "higher-quality tokens learn faster"
+    },
+    {
+      "lever": "Low-bit / mixed-precision training",
+      "x": 1.8,
+      "cumulative_x": 10.8,
+      "why": "cheaper per gradient step"
+    },
+    {
+      "lever": "PEFT / LoRA (train few params)",
+      "x": 2.5,
+      "cumulative_x": 27.0,
+      "why": "adapt, don't retrain everything"
+    }
+  ],
+  "stacked_x": 27.0,
+  "reaches_101x": false,
+  "note": "training cost is physics-bound: efficiency levers (distill/data/low-bit/LoRA) give ~2-10x stacked, NOT 101x. To learn the data you must do the compute. This is the same wall as T1 real-scale; mitigate with pretrained + cheap adaptation + free GPU, don't fight it."
+}

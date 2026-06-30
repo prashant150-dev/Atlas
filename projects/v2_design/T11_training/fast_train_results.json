@@ -1,0 +1,54 @@
+{
+  "speedup_x": 50.4,
+  "levers": [
+    [
+      "Sparse-only compute (skip zeros)",
+      6.0
+    ],
+    [
+      "Distillation (fewer tokens)",
+      3.0
+    ],
+    [
+      "LUT kernel backprop",
+      2.0
+    ],
+    [
+      "Low-bit training",
+      1.4
+    ]
+  ],
+  "rows": [
+    {
+      "params_M": 1.0,
+      "before_hr": 0.9,
+      "after_hr": 0.02
+    },
+    {
+      "params_M": 5.0,
+      "before_hr": 23.6,
+      "after_hr": 0.47
+    },
+    {
+      "params_M": 10.0,
+      "before_hr": 94.4,
+      "after_hr": 1.87
+    },
+    {
+      "params_M": 50.0,
+      "before_hr": 2361.1,
+      "after_hr": 46.85
+    },
+    {
+      "params_M": 100.0,
+      "before_hr": 9444.4,
+      "after_hr": 187.39
+    },
+    {
+      "params_M": 1000.0,
+      "before_hr": 944444.4,
+      "after_hr": 18738.98
+    }
+  ],
+  "note": "fast-training tech (sparse-skip x distill x LUT-backprop x low-bit) ~50x; shifts CPU-feasible native-sparse training from ~5M to ~100M. 1B+ still GPU."
+}

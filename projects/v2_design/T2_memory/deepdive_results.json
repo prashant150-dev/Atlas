@@ -1,0 +1,25 @@
+{
+  "D": 4096,
+  "n_layers": 24,
+  "fp32_mb": 1610.6,
+  "packed_mb": 100.7,
+  "modes": {
+    "load_all_fp32": {
+      "peak_mb": 1611.7,
+      "ms": 132.2
+    },
+    "paged_fp32": {
+      "peak_mb": 67.9,
+      "ms": 1808.4
+    },
+    "paged_2bit": {
+      "peak_mb": 67.9,
+      "ms": 6570.7
+    },
+    "paged_2bit_prefetch": {
+      "peak_mb": 69.9,
+      "ms": 4649.9
+    }
+  },
+  "note": "paging x low-bit x prefetch toward 101x memory; reduction=n_layers x (16/bits); read time is the real cost, cut by low-bit + prefetch."
+}

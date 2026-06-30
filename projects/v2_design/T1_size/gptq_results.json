@@ -1,0 +1,13 @@
+{
+  "levels": 4,
+  "shape": [
+    768,
+    3072
+  ],
+  "naive_weight_nmse": 0.2886,
+  "gptq_weight_nmse": 0.9803,
+  "naive_output_nmse": 0.0872,
+  "gptq_output_nmse": 0.0104,
+  "output_improvement_x": 8.38,
+  "note": "GPTQ-style error-compensated post-hoc 2-bit vs naive round-to-nearest; no training, CPU. Compensation minimises layer OUTPUT error -> 2-bit usable without a GPU."
+}

@@ -1,0 +1,12 @@
+{"method": "FP", "ppl": 77.796, "seed": "-"}
+{"method": "ternary_posthoc", "ppl": 7329.314, "seed": "det"}
+{"method": "vq_posthoc", "seed": 0, "ppl": 725.208}
+{"method": "ternary_heal", "seed": 0, "ppl": 872.014}
+{"method": "vq_heal", "seed": 0, "ppl": 319.462}
+{"method": "vq_posthoc", "seed": 1, "ppl": 491.856}
+{"method": "ternary_heal", "seed": 1, "ppl": 1124.609}
+{"method": "vq_heal", "seed": 1, "ppl": 334.894}
+{"method": "vq_posthoc", "seed": 2, "ppl": 737.663}
+{"method": "ternary_heal", "seed": 2, "ppl": 1971.868}
+{"method": "vq_heal", "seed": 2, "ppl": 256.809}
+{"method": "vq_posthoc", "seed": 3, "ppl": 439.299}

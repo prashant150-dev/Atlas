@@ -1,0 +1,103 @@
+{
+  "reps": 20,
+  "rows": [
+    {
+      "d_in": 128,
+      "d_out": 512,
+      "sparsity": 0.9,
+      "dense_ms": 0.3,
+      "sparse_ms": 0.225,
+      "speedup": 1.33
+    },
+    {
+      "d_in": 128,
+      "d_out": 512,
+      "sparsity": 0.95,
+      "dense_ms": 0.131,
+      "sparse_ms": 0.124,
+      "speedup": 1.06
+    },
+    {
+      "d_in": 128,
+      "d_out": 512,
+      "sparsity": 0.98,
+      "dense_ms": 0.139,
+      "sparse_ms": 0.097,
+      "speedup": 1.43
+    },
+    {
+      "d_in": 512,
+      "d_out": 512,
+      "sparsity": 0.9,
+      "dense_ms": 1.341,
+      "sparse_ms": 0.477,
+      "speedup": 2.81
+    },
+    {
+      "d_in": 512,
+      "d_out": 512,
+      "sparsity": 0.95,
+      "dense_ms": 0.243,
+      "sparse_ms": 0.283,
+      "speedup": 0.86
+    },
+    {
+      "d_in": 512,
+      "d_out": 512,
+      "sparsity": 0.98,
+      "dense_ms": 0.264,
+      "sparse_ms": 0.18,
+      "speedup": 1.47
+    },
+    {
+      "d_in": 1024,
+      "d_out": 4096,
+      "sparsity": 0.9,
+      "dense_ms": 5.558,
+      "sparse_ms": 6.84,
+      "speedup": 0.81
+    },
+    {
+      "d_in": 1024,
+      "d_out": 4096,
+      "sparsity": 0.95,
+      "dense_ms": 5.021,
+      "sparse_ms": 3.518,
+      "speedup": 1.43
+    },
+    {
+      "d_in": 1024,
+      "d_out": 4096,
+      "sparsity": 0.98,
+      "dense_ms": 6.243,
+      "sparse_ms": 1.717,
+      "speedup": 3.64
+    },
+    {
+      "d_in": 4096,
+      "d_out": 4096,
+      "sparsity": 0.9,
+      "dense_ms": 24.312,
+      "sparse_ms": 28.015,
+      "speedup": 0.87
+    },
+    {
+      "d_in": 4096,
+      "d_out": 4096,
+      "sparsity": 0.95,
+      "dense_ms": 21.742,
+      "sparse_ms": 15.178,
+      "speedup": 1.43
+    },
+    {
+      "d_in": 4096,
+      "d_out": 4096,
+      "sparsity": 0.98,
+      "dense_ms": 28.214,
+      "sparse_ms": 7.51,
+      "speedup": 3.76
+    }
+  ],
+  "avg_big_speedup": 2.56,
+  "note": "dense vs scipy-CSR sparse matmul on CPU; sparse-skip helps only at big matrices + high sparsity (unstructured CSR overhead dominates small ones). Real fast-training needs big/structured sparsity."
+}

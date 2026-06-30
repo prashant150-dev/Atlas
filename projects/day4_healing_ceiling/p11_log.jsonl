@@ -1,0 +1,6 @@
+{"step": 0, "held_top1": 0.05859375, "held_ppl": 37149.5859375, "train_top1": 0.04296875, "eval_positions": 256, "note": "naive"}
+{"step": 15, "held_top1": 0.20703125, "held_ppl": 1170.9742431640625, "train_top1": 0.23046875, "gap": 0.0234, "loss": 2.74102783203125, "elapsed_sec": 87.4}
+{"step": 30, "held_top1": 0.265625, "held_ppl": 689.380126953125, "train_top1": 0.28125, "gap": 0.0156, "loss": 1.7988038063049316, "elapsed_sec": 168.7}
+{"step": 60, "held_top1": 0.29296875, "held_ppl": 549.0939331054688, "train_top1": 0.36328125, "gap": 0.0703, "loss": 1.4558091163635254, "elapsed_sec": 317.0}
+{"step": 120, "held_top1": 0.26953125, "held_ppl": 410.1708984375, "train_top1": 0.4296875, "gap": 0.1602, "loss": 0.9814014434814453, "elapsed_sec": 553.2}
+{"step": 240, "held_top1": 0.30078125, "held_ppl": 375.37841796875, "train_top1": 0.23828125, "gap": -0.0625, "loss": 0.5586432218551636, "elapsed_sec": 1075.6}

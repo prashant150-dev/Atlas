@@ -1,0 +1,16 @@
+{
+  "n": 8,
+  "modes": {
+    "ungrounded": {
+      "correct": 5,
+      "idk": 0,
+      "hallucinated": 3
+    },
+    "grounded": {
+      "correct": 5,
+      "idk": 3,
+      "hallucinated": 0
+    }
+  },
+  "note": "retrieval-grounding + honest IDK: hallucinations (confident-wrong) drop to ~0; answers are correct-from-KB or honest unknown. The reliability lever, composes with T4 retrieval + self-verify."
+}

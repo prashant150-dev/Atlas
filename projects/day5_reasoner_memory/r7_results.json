@@ -1,0 +1,33 @@
+{
+  "correctness_max_err": 4.57763671875e-05,
+  "layer": {
+    "K": 768,
+    "N": 768,
+    "batch": 64
+  },
+  "note": "RAM floor + multiply-elimination + exactness are proven in Python; the SPEED win requires a SIMD/C kernel and is not claimable from NumPy vs BLAS.",
+  "ops": {
+    "fp32_multiplies": 37748736,
+    "multiply_reduction_x": 768.0,
+    "ternary_adds": 21780992,
+    "ternary_scale_multiplies": 49152,
+    "ternary_weight_multiplies": 0
+  },
+  "ram": {
+    "bits_per_weight": 2.042,
+    "fp32_MB": 2.359,
+    "packed_MB": 0.1505,
+    "peak_transient_KB": 49.15,
+    "ratio": 15.67
+  },
+  "small_proof": {
+    "adds": 154,
+    "max_err": 1.430511474609375e-06,
+    "scale_multiplies": 8,
+    "weight_multiplies": 0
+  },
+  "timing_ms": {
+    "blas_fp32": 0.77,
+    "python_packed": 53.06
+  }
+}

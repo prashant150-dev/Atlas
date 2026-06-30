@@ -1,0 +1,27 @@
+{
+  "answer_acc_hybrid": 0.9125,
+  "bill": {
+    "learned_head_fp32_KB": 393.2,
+    "learned_head_params": 98304,
+    "memory_bits_per_fact": 55.2,
+    "memory_facts": 240,
+    "memory_gzip_bytes": 1656,
+    "reasoner_fp32_MB": 497.8,
+    "reasoner_params": 124439808
+  },
+  "caveats": [
+    "GPT-2-small reasoner (only offline model); synthetic low-entropy facts",
+    "answers are copy-from-context; speed is greedy single-stream CPU"
+  ],
+  "kb_size": 240,
+  "lex_threshold": 0.1,
+  "model": "models/gpt2",
+  "retrieval": {
+    "hybrid": 0.8479,
+    "learned": 0.85,
+    "lexical": 0.5021,
+    "routed_to_learned": 200,
+    "workload": 480
+  },
+  "tok_per_sec": 15.4
+}

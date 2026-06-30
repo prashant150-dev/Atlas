@@ -1,0 +1,31 @@
+{
+  "model": "models/gpt2",
+  "teacher_ppl": 48.41,
+  "rows": [
+    {
+      "sparsity": 0.9,
+      "mode": "posthoc",
+      "ppl": 2398.28,
+      "vs_fp": 49.54
+    },
+    {
+      "sparsity": 0.9,
+      "mode": "rigl",
+      "ppl": 2756.12,
+      "vs_fp": 56.93
+    },
+    {
+      "sparsity": 0.95,
+      "mode": "posthoc",
+      "ppl": 2935.82,
+      "vs_fp": 60.65
+    },
+    {
+      "sparsity": 0.95,
+      "mode": "rigl",
+      "ppl": 2849.91,
+      "vs_fp": 58.87
+    }
+  ],
+  "note": "Step 6: RigL native-sparse vs post-hoc on REAL GPT-2 (FP weights + healing), held-out perplexity. Validates the toy finding on a real LM."
+}
