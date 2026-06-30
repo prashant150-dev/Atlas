@@ -110,6 +110,11 @@ class AtlasEngine:
             return self._do_code(prompt)
         if r == "fact":
             return self._do_fact(prompt)
+        if self.config.use_reasoning:
+            from .reasoning import looks_like_reasoning
+
+            if looks_like_reasoning(prompt):
+                return self._do_reasoning(prompt)
         return self._do_general(prompt)
 
     def _do_math(self, prompt: str) -> AtlasResult:
@@ -152,6 +157,19 @@ class AtlasEngine:
                 return AtlasResult("fact", hit.answer or "", True, "retrieval", round(0.9 + 0.1 * hit.score, 3))
         return AtlasResult("fact", "I don't know based on my knowledge base.", True, "honest-IDK", 0.9)
 
+    def _do_reasoning(self, prompt: str) -> AtlasResult:
+        """Answer a quantitative word problem with self-consistency (T6)."""
+
+        from . import reasoning
+
+        res = reasoning.self_consistency(
+            self.model, prompt, k=self.config.reasoning_samples,
+            max_new_tokens=max(self.config.max_new_tokens, 160),
+        )
+        if res.numeric is None:  # no numeric consensus — fall back honestly
+            return self._do_general(prompt)
+        return AtlasResult("reasoning", res.answer, False, "self-consistency", res.confidence)
+
     def _do_general(self, prompt: str) -> AtlasResult:
         """Ground when possible (kills hallucination), else use the base model."""
 
@@ -191,6 +209,16 @@ def _self_test() -> None:
     algebra = engine.answer("solve x^2 - 4 = 0")
     if algebra.tool_used != "symbolic" or not algebra.verified:
         raise RuntimeError(f"algebra not solved symbolically: {algebra.to_dict()}")
+
+    # reasoning: a word problem routes through self-consistency (offline numbered model)
+    class _NumModel:
+        def generate(self, prompt, max_new_tokens=None, sample=False, temperature=0.8, seed=None):
+            return "3*12=36, minus 17 leaves 19. The answer is 19."
+
+    rengine = AtlasEngine(model=_NumModel(), config=AtlasConfig(model_key="gpt2"))
+    wp = rengine.answer("A shop has 3 boxes of 12 apples, sells 17. How many remain?")
+    if wp.route != "reasoning" or wp.tool_used != "self-consistency" or "19" not in wp.answer:
+        raise RuntimeError(f"reasoning route failed: {wp.to_dict()}")
 
     print("AtlasEngine self-test (offline EchoModel)")
     for prompt in cases:

@@ -41,6 +41,7 @@ class AtlasConfig:
     chat: bool = True
     max_new_tokens: int = 80
     retrieval_threshold: float = 0.6
+    reasoning_samples: int = 3
     use_retrieval: bool = True
     use_reasoning: bool = True
     use_safety: bool = True
@@ -52,6 +53,8 @@ class AtlasConfig:
 
         if not isinstance(self.max_new_tokens, int) or self.max_new_tokens <= 0:
             raise ValueError("max_new_tokens must be a positive integer")
+        if not isinstance(self.reasoning_samples, int) or self.reasoning_samples <= 0:
+            raise ValueError("reasoning_samples must be a positive integer")
         if not 0.0 <= self.retrieval_threshold <= 1.0:
             raise ValueError("retrieval_threshold must be in [0, 1]")
         if not self.model_path:
