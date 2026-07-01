@@ -1,10 +1,10 @@
 {
-  "src": "models\\qwen2.5-1.5b",
-  "full_fp_gb": 3.087,
-  "peak_mb": 933.5,
-  "compressed_gb": 0.959,
-  "compression_x": 3.22,
-  "n_quantized": 196,
-  "n_raw": 142,
-  "seconds": 1037.5
+  "src": "models\\gpt2",
+  "full_fp_gb": 0.498,
+  "peak_mb": 154.4,
+  "compressed_gb": 0.111,
+  "compression_x": 4.49,
+  "n_quantized": 48,
+  "n_raw": 100,
+  "seconds": 135.6
 }
