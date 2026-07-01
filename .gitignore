@@ -10,8 +10,9 @@
 **/settings.local.json
 
 # ===== Model weights & big binaries (regenerable / downloadable) =====
-models/
-experiments/
+# anchored to repo root so the source package src/atlas/models/ is NOT ignored
+/models/
+/experiments/
 *.safetensors
 *.bin
 *.pt
